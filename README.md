@@ -17,10 +17,10 @@ Many of the lessons will be adapted versions of the corresponding
 The topics that will be covered
 
 1. Unix Shell
-  - Navigating Files and Directories
-  - Working with Files and Directories
-  - Shell Scripts
-  - SSH
+   - Navigating Files and Directories
+   - Working with Files and Directories
+   - Shell Scripts
+   - SSH
 2. R
    - Project templates
    - Dynamic reports with knitr
