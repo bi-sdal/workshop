@@ -44,11 +44,13 @@ The topics that will be covered
    - Model Fitting
    - Machine Learning Basics
 3. SQL
+   - What is SQL and why?
    - Selecting data
+   - Insert data
+   - Combining
    - Sorting and removing duplicates
    - Filtering
    - Aggregation
-   - Combining
    - R and SQL
 4. Git
    - Setting up Git
