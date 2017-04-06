@@ -37,7 +37,7 @@ The topics that will be covered
    - Visualizing data
    - Creating functions
    - Making choices
-   - GeoSpatial analysis
+   - [GeoSpatial][10] analysis
        - [vector data][7]
        - [raster data][8]
        - [geospatial][9]
@@ -78,3 +78,4 @@ The topics that will be covered
 [7]: http://neondataskills.org/tutorial-series/vector-data-series/
 [8]: http://neondataskills.org/tutorial-series/raster-data-series/
 [9]: https://github.com/datacarpentry/r-spatial-data-management-intro
+[10]: http://www.datacarpentry.org/lessons/
