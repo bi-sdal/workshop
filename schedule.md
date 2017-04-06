@@ -29,16 +29,37 @@
 - R
   - Manipulating dataframes
   - Visualizing data
+	- ggplot2
   - Aaron's data discovery/processing
 
-# May 24 - Day (most of the day)
+# May 25 - Day 4 (most of the day)
 
   - Functions
   - Choices
   - Apply family
+  - tidyverse
+	- tidyr
+	- dplyr
   - String manipulation
   - Regular Expressions
 
-# May 25 - Day 4
+# May 26 - Day 5
   - Geospatial
-  - web scrapping
+	- R
+	- PostGIS
+  - Web scrapping
+	- APIs
+	- Scraping
+
+# Later
+
+- Intro to ML and model fitting
+  - Precision/Accuracy/Sensitivity/Specificity
+  - Supervised/Unsupervised learning
+	- Types of problems they are used for
+	- regression
+	- clustering
+  - Cross validation
+- Shiny
+- Git
+- Make
