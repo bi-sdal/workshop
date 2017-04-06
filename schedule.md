@@ -3,7 +3,7 @@
 - Lunch
 - Projects
 
-# May 23 - Day 2 (most of the day after intros in the morning)
+# May 23 - Day 2
 
 - Unix Shell
 - Intro SQL
@@ -18,7 +18,7 @@
     - Reading csv files
     - Working with databases in R
 
-# May 24 - Day 3 (all day)
+# May 24 - Day 3
 
 - SQL
   - Joins
@@ -32,7 +32,7 @@
 	- ggplot2
   - Aaron's data discovery/processing
 
-# May 25 - Day 4 (most of the day)
+# May 25 - Day 4
 
   - Functions
   - Choices
