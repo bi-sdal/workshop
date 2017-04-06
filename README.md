@@ -18,15 +18,21 @@ The topics that will be covered
 
 1. Unix Shell
    - Navigating Files and Directories
+   	- `cd`, `ls`
    - Working with Files and Directories
+   	- `mkdir`, `touch`, `nano`
    - Shell Scripts
+   	- running shell scripts and understanding the working directory
    - SSH
+   	- `ssh` connecting to a remote server/computer
 2. R
    - Project templates
+   	- Project structure as described [here][5]
    - Dynamic reports with knitr
 	 - Markdown
 	 - LaTeX
    - Working with data
+   	- Reading csv files
    - Manipulating dataframes
    - Visualizing data
    - Creating functions
@@ -60,3 +66,4 @@ The topics that will be covered
 [2]: https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program
 [3]: https://software-carpentry.org/lessons/
 [4]: http://www.datacarpentry.org/lessons/
+[5]: https://github.com/chendaniely/computational-project-cookie-cutter
