@@ -38,6 +38,9 @@ The topics that will be covered
    - Creating functions
    - Making choices
    - GeoSpatial analysis
+       - [vector data][7]
+       - [raster data][8]
+       - [geospatial][9]
    - Model Fitting
    - Machine Learning Basics
 3. SQL
@@ -72,3 +75,6 @@ The topics that will be covered
 [4]: http://www.datacarpentry.org/lessons/
 [5]: https://github.com/chendaniely/computational-project-cookie-cutter
 [6]: https://www.rstudio.com/resources/cheatsheets/
+[7]: http://neondataskills.org/tutorial-series/vector-data-series/
+[8]: http://neondataskills.org/tutorial-series/raster-data-series/
+[9]: https://github.com/datacarpentry/r-spatial-data-management-intro
