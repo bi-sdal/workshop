@@ -25,7 +25,7 @@ The topics that will be covered
        - running shell scripts and understanding the working directory
    - SSH
        - `ssh` connecting to a remote server/computer
-2. R
+2. R ([cheatsheets][6])
    - Project templates
        - Project structure as described [here][5]
    - Dynamic reports with knitr
@@ -71,3 +71,4 @@ The topics that will be covered
 [3]: https://software-carpentry.org/lessons/
 [4]: http://www.datacarpentry.org/lessons/
 [5]: https://github.com/chendaniely/computational-project-cookie-cutter
+[6]: https://www.rstudio.com/resources/cheatsheets/
