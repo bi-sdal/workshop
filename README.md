@@ -33,6 +33,7 @@ The topics that will be covered
        - LaTeX
    - Working with data
        - Reading csv files
+       - Working with databases
    - Manipulating dataframes
    - Visualizing data
    - Creating functions
