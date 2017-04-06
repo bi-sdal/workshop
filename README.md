@@ -38,6 +38,8 @@ The topics that will be covered
    - Creating functions
    - Making choices
    - GeoSpatial analysis
+   - Model Fitting
+   - Machine Learning Basics
 3. SQL
    - Selecting data
    - Sorting and removing duplicates
@@ -61,6 +63,8 @@ The topics that will be covered
    - Pattern Rules
    - Variables
    - Functions
+6. Extras
+   - Shiny
 
 [1]: https://www.bi.vt.edu/sdal
 [2]: https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program
