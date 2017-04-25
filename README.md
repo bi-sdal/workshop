@@ -16,7 +16,7 @@ Many of the lessons will be adapted versions of the corresponding
 
 The topics that will be covered
 
-## 1. System Setup and Unix Tools
+## 1. System Setup, Unix Tools & git
 #### Navigating Files and Directories
   - `cd`, `ls`
   
@@ -28,12 +28,22 @@ The topics that will be covered
   
 #### SSH
   - `ssh` connecting to a remote server/computer
+
+#### Git
+  - Setting up Git
+  - Creating a repository
+  - Tracking changes
+  - Exploring history
+  - Ignoring Things
+  - Remotes in Github
+  - Collaboration
+  - Conflicts
   
 ## 2. The Data Science Process & Data Discovery
   - 
   - 
 
-## 3. Data Ingestion, Use & Storage
+## 3. DataDiscovery, Ingestion, Use & Storage
 #### RCUrl
   - `ftp`, `ftps`, `sftp`
   
@@ -46,16 +56,18 @@ The topics that will be covered
 #### Files
   - `csv`, `Excel`, `RData`, `zip`
 
-#### R Data Objects
+## 4. Data Objects, Functions & Looping in R
   - `Data.Frame`, `Data.Table`, `Spatial Data.Frames` [point, line polygon]
+  - functions
+  - for loops vs apply family
 
-## 4. Data Information Management
+## 5. Data Information Management
 #### Metadata
 #### Provenance
 #### Value Mapping
 #### Lexicon
 
-## 5. Data Profiling
+## 6. Data Profiling
 #### Structure
   - Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type
 
@@ -74,8 +86,16 @@ The topics that will be covered
 
 ## 8. Data Analysis / Modeling
 
-## 9. Data Presentation
+## 9. Data Presentation & Reporting
   - `Shiny`
+  - Dynamic reports with knitr
+    - `Markdown`, `LaTeX`
+
+
+
+
+
+
 
 
 1. Unix Shell
