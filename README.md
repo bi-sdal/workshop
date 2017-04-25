@@ -16,7 +16,7 @@ Many of the lessons will be adapted versions of the corresponding
 
 The topics that will be covered
 
-## 1. System Setup, Unix Tools & git
+## 1. System Setup, Unix Tools & Git
 #### Navigating Files and Directories
   - `cd`, `ls`
   
@@ -57,7 +57,7 @@ The topics that will be covered
   - `csv`, `Excel`, `RData`, `zip`
 
 ## 4. Data Objects, Functions & Looping in R
-  - `Data.Frame`, `Data.Table`, `Spatial Data.Frames` [point, line polygon]
+  - `Data.Frame`, `Data.Table`, `Spatial Data.Frames` [point, line, polygon], `Raster`
   - functions
   - for loops vs apply family
 
