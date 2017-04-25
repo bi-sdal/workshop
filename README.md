@@ -33,7 +33,7 @@ The topics that will be covered
   - 
   - 
 
-## 2. Data Ingestion, Use & Storage
+## 3. Data Ingestion, Use & Storage
 #### RCUrl
   - `ftp`, `ftps`, `sftp`
   
@@ -48,6 +48,35 @@ The topics that will be covered
 
 #### R Data Objects
   - `Data.Frame`, `Data.Table`, `Spatial Data.Frames` [point, line polygon]
+
+## 4. Data Information Management
+#### Metadata
+#### Provenance
+#### Value Mapping
+#### Lexicon
+
+## 5. Data Profiling
+#### Structure
+  - Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type
+
+#### Quality
+  - Completeness, Value Validity, Consistency, Uniqueness, Duplication
+
+## 6. Data Preparation & Linkage
+#### Cleaning
+#### Transformation
+#### Restructuring
+#### Linking
+  - Joins / Merges (Deterministic, Probabilistic)
+  - String Matching (Insecure, Secure)
+
+## 7. Data Exploration
+
+## 8. Data Analysis / Modeling
+
+## 9. Data Presentation
+  - `Shiny`
+
 
 1. Unix Shell
    - Navigating Files and Directories
