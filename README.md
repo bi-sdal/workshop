@@ -32,12 +32,20 @@ The topics that will be covered
 ## The Data Science Process & Data Discovery
 
 ## Data Ingestion, Use & Storage
-#### RCUrl (ftp, ftps, sftp)
-#### APIs (Google, Arlington)
-#### Database (DBI/PostgreSQL)
-#### Files (csv, Excel, RData, zip)
-#### R Data Objects (Data.Frame, Data.Table, Spatial Data.Frames [point, line polygon])
+#### RCUrl
+  - `ftp`, `ftps`, `sftp`
+  
+#### APIs
+  - `Google`, `Arlington`
 
+#### Database
+  - `SQL`, `DBI/PostgreSQL`
+
+#### Files
+  - `csv`, `Excel`, `RData`, `zip`
+
+#### R Data Objects
+  - `Data.Frame`, `Data.Table`, `Spatial Data.Frames` [point, line polygon]
 
 1. Unix Shell
    - Navigating Files and Directories
