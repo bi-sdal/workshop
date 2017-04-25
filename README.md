@@ -17,22 +17,26 @@ Many of the lessons will be adapted versions of the corresponding
 The topics that will be covered
 
 ## System Setup and Unix Tools
-    - Navigating Files and Directories
-       - `cd`, `ls`
-    - Working with Files and Directories
-       - `mkdir`, `touch`, `nano`
-    - Shell Scripts
-       - running shell scripts and understanding the working directory
-    - SSH
-       - `ssh` connecting to a remote server/computer
+#### Navigating Files and Directories
+  - `cd`, `ls`
+  
+#### Working with Files and Directories
+  - `mkdir`, `touch`, `nano`
+  
+#### Shell Scripts
+  - running shell scripts and understanding the working directory
+  
+#### SSH
+  - `ssh` connecting to a remote server/computer
+  
 ## The Data Science Process & Data Discovery
 
 ## Data Ingestion, Use & Storage
-    - RCUrl (ftp, ftps, sftp)
-    - APIs (Google, Arlington)
-    - Database (DBI/PostgreSQL)
-    - Files (csv, Excel, RData, zip)
-    - R Data Objects (Data.Frame, Data.Table, Spatial Data.Frames [point, line polygon])
+#### RCUrl (ftp, ftps, sftp)
+#### APIs (Google, Arlington)
+#### Database (DBI/PostgreSQL)
+#### Files (csv, Excel, RData, zip)
+#### R Data Objects (Data.Frame, Data.Table, Spatial Data.Frames [point, line polygon])
 
 
 1. Unix Shell
