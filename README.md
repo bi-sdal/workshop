@@ -88,6 +88,7 @@ The topics that will be covered
 
 ## 9. Data Presentation & Reporting
   - `Shiny`
+    - Presentations, Dashboards
   - Dynamic reports with knitr
     - `Markdown`, `LaTeX`
 
