@@ -12,6 +12,24 @@ at the [Social and Decision Analytics Laboratory][1].
 Many of the lessons will be adapted versions of the corresponding
 [Software-Carpentry][3] or [Data Carpentry][4] Lesson materials
 
+<table>
+<tr><th>5/22</th><th align="left" colspan="2">Program Introduction</th></tr>
+<tr><td></td><td>Overview of SDAL</td><td>Sallie Keller</td></tr>
+<tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>Institutional Review Board (IRB) - Online</td><td></td></tr>
+<tr><th>5/23</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>System Setup</td><td>Server Access, RStudio Connection, Database Connection</td></tr>
+<tr><td></td><td>Unix Tools</td><td>Navigating Files and Directories (cd, ls)</td></tr>
+<tr><td></td><td></td><td>Working with Files and Directories (mkdir, touch, nano)</td></tr>
+<tr><td></td><td></td><td>Shell Scripts (running shell scripts and understanding the working directory)</td></tr>
+<tr><td></td><td></td><td>SSH (connecting to a remote server/computer with secure shell)</td></tr>
+<tr><td></td><td>Git</td><td>Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td></tr>
+<tr><th></th><th align="left" colspan="2">Project Overview Presentations</th></tr>
+</table>
+
+
 # Syllabus
 
 The topics that will be covered
