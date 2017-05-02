@@ -20,7 +20,7 @@ Many of the lessons will be adapted versions of the corresponding
 <tr><th></th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td></td></tr>
 <tr><th>5/23</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td style="data-type='html'"><div><a href="./training/system_setup">System Setup</a></div></td><td>Server Access, RStudio Connection, Database Connection</td></tr>
+<tr><td></td><td><div><a href="./training/system_setup">System Setup</a></div></td><td>Server Access, RStudio Connection, Database Connection</td></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a></td><td>Navigating Files and Directories (cd, ls)</td></tr>
 <tr><td></td><td></td><td>Working with Files and Directories (mkdir, touch, nano)</td></tr>
 <tr><td></td><td></td><td>Shell Scripts (running shell scripts and understanding the working directory)</td></tr>
