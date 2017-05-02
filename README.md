@@ -14,7 +14,7 @@ Many of the lessons will be adapted versions of the corresponding
 
 <table>
 <tr><th>5/22</th><th align="left" colspan="2">Program Introduction</th></tr>
-<tr><td></td><td width="350px">Overview of SDAL</td><td>Sallie Keller</td></tr>
+<tr><td></td><td width="275px">Overview of SDAL</td><td>Sallie Keller</td></tr>
 <tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Training</th></tr>
