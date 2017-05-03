@@ -24,7 +24,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Git: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Introductions</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
@@ -33,7 +33,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Data Ingestion & Storage: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Assignments & Meetings</th></tr>
 <tr><td></td><td>Project Team Assignments</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Project Team Meetings</td><td>Project Leaders</td></tr>
 
