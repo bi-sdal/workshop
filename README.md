@@ -41,6 +41,20 @@ Many of the lessons will be adapted versions of the corresponding
 
 <tr><th>5/26</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
+
+<tr><th>5/30</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>Data Profiling: Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
+
+<tr><th>5/31</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>Data Profiling: Quality</td><td>Aaron Schroeder: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
+<tr><th>5/31</th><th align="left" colspan="2">Brownbag</th></tr>
+<tr><td></td><td>Data Visualization</td><td>Josh Goldstein</td></tr>
+
+<tr><th>6/1</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>Data Visualization in R: Plotting</td><td>Daniel Chen</td></tr>
+
+<tr><th>6/2</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>Data Visualization in R: Geographic</td><td>Aaron Schroeder</td></tr>
 </table>
 
 
@@ -52,12 +66,6 @@ Many of the lessons will be adapted versions of the corresponding
 #### Value Mapping
 #### Lexicon
 
-## 6. Data Profiling
-#### Structure
-  - Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type
-
-#### Quality
-  - Completeness, Value Validity, Consistency, Uniqueness, Duplication
 
 ## 6. Data Preparation & Linkage
 #### Cleaning
@@ -81,18 +89,6 @@ Many of the lessons will be adapted versions of the corresponding
 
 
 
-
-
-
-1. Unix Shell
-   - Navigating Files and Directories
-       - `cd`, `ls`
-   - Working with Files and Directories
-       - `mkdir`, `touch`, `nano`
-   - Shell Scripts
-       - running shell scripts and understanding the working directory
-   - SSH
-       - `ssh` connecting to a remote server/computer
 2. R ([cheatsheets][6])
    - Project templates
        - Project structure as described [here][5]
