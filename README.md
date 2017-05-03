@@ -18,7 +18,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
-<tr><td></td><td><a href="./training/system_setup">System Setup</a></td><td>Aaron Schroeder: Server Access, RStudio Connection, Database Connection</td></tr>
+<tr><td></td><td><a href="./training/system_setup">System Setup</a>: Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder</td></tr>
 
 <tr><th>5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
@@ -38,7 +38,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Project Team Meetings</td><td>Project Leaders</td></tr>
 
 <tr><th>5/25</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Data Objects in R</td><td>Daniel Chen: Data.Frames & Data.Tables</td></tr>
+<tr><td></td><td>Data Objects in R: Data.Frames & Data.Tables</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Functions & Looping in R: Functions & Parameters; 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
