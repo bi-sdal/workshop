@@ -26,8 +26,8 @@ Many of the lessons will be adapted versions of the corresponding
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a></td><td>Daniel Chen: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td></tr>
 <tr><td></td><td>Git</td><td>Daniel Chen: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td></tr>
 <tr><th></th><th align="left" colspan="2">Summer Projects</th></tr>
-<tr><td>Project Overview Presentations</td><td></td><td>Project Leaders</td></tr>
-<tr><td>Project Assignment Process</td><td></td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
+<tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
 <tr><th>5/24</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
