@@ -63,7 +63,6 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><td></td><td></td><td></td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
