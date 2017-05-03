@@ -166,14 +166,8 @@ at the [Social and Decision Analytics Laboratory][1].
 </table>
 
 
-
-
-## 5. Data Information Management
-#### Metadata
-#### Provenance
-#### Value Mapping
-#### Lexicon
-
+?????
+<pre>
 ## 6. Data Preparation & Linkage
 #### Cleaning
 #### Transformation
@@ -187,6 +181,7 @@ at the [Social and Decision Analytics Laboratory][1].
    - Pattern Rules
    - Variables
    - Functions
+</pre>
 
 [1]: https://www.bi.vt.edu/sdal
 [2]: https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program
