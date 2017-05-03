@@ -47,7 +47,7 @@ Many of the lessons will be adapted versions of the corresponding
 
 <tr><th>5/31</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>Data Profiling: Quality</td><td>Aaron Schroeder: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
-<tr><th>5/31</th><th align="left" colspan="2">Brownbag</th></tr>
+<tr><th></th><th align="left" colspan="2">Brownbag</th></tr>
 <tr><td></td><td>Data Visualization</td><td>Josh Goldstein</td></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Training</th></tr>
