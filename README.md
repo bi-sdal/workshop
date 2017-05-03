@@ -62,18 +62,18 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Data Analysis</td><td>Vicki Lancaster</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
+<tr><td></td><td>Making Choices, Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
-<tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: Making Choices, Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
-<tr><td></td><td>Data Analysis</td><td>Vicki Lancaster</td></tr>
+<tr><th>6/2</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
 <tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
@@ -110,15 +110,14 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
-<tr><th>6/13</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><th>6/13</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/14</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Training: Agent-Based Modeling with NetLogo</td><td>Bianica Pires</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>Agent-Based Modeling Approaches</td><td>Mark Orr</td></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>6/14</th><th align="left" colspan="2">Morning: Project Work</th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
-<tr><td></td><td>Social Network Analysis</td><td>Gizem Korkmaz</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/15</th><th align="left" colspan="2">Morning: Project Work</th></tr>
@@ -131,7 +130,39 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
 <tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
 
+<tr><th>6/19</th><th align="left" colspan="2">Morning: Weekly Kickoff & Project Work</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/20</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/21</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Social Network Analysis</td><td>Gizem Korkmaz</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/22</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
 <tr><th>6/23</th><th align="left" colspan="2">MIDTERMS!!</th></tr>
+
+<tr><th>6/26</th><th align="left" colspan="2">Morning: Weekly Kickoff & Project Work</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/27</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/28</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 </table>
 
@@ -144,20 +175,11 @@ at the [Social and Decision Analytics Laboratory][1].
 #### Value Mapping
 #### Lexicon
 
-
 ## 6. Data Preparation & Linkage
 #### Cleaning
 #### Transformation
 #### Restructuring
 #### Linking
-  - Joins / Merges (Deterministic, Probabilistic)
-  - String Matching (Insecure, Secure)
-
-
-
-
-2. R ([cheatsheets][6])
-
 
 5. Make
    - Makefiles
@@ -166,8 +188,6 @@ at the [Social and Decision Analytics Laboratory][1].
    - Pattern Rules
    - Variables
    - Functions
-6. Extras
-   - Shiny
 
 [1]: https://www.bi.vt.edu/sdal
 [2]: https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program
