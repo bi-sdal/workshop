@@ -14,7 +14,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td width="245px">Overview of SDAL</td><td>Sallie Keller</td></tr>
 <tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: Presentation (Pizza Provided)</th><th></th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: Presentation (Pizza Provided)</th></tr>
 <tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
@@ -23,7 +23,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a></td><td>Daniel Chen: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td></tr>
 <tr><td></td><td>Git</td><td>Daniel Chen: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
@@ -46,13 +46,13 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>5/26</th><th align="left" colspan="2">Morning</th></tr>
 <tr><td></td><td>Training: SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>5/30</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
 <tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Training: Data Profiling - Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
@@ -60,15 +60,17 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
 <tr><td></td><td>Data Visualization</td><td>Josh Goldstein</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-<tr><td></td><td>Weekly Wrap-Up Meeting</td><td></td></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Training: Data Visualization in R - Plotting</td><td>Daniel Chen</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
 <tr><td></td><td>Training: Data Visualization in R - Geographic</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+<tr><td></td><td>Weekly Wrap-Up Meeting</td><td></td></tr>
 </table>
 
 
