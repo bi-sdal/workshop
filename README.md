@@ -1,5 +1,4 @@
- Introduction
-Lesson Material used during the [Data Science for the Public Good Program][2]
+Schedule & Lesson Material for the [Data Science for the Public Good Program][2]
 at the [Social and Decision Analytics Laboratory][1].
 
 > The Data Science for the Public Good program teaches student fellows
@@ -9,52 +8,67 @@ at the [Social and Decision Analytics Laboratory][1].
 > lenses of statistics, social science, and data science research,
 > DSPG students will learn to integrate all available data resources
 
-Many of the lessons will be adapted versions of the corresponding
-[Software-Carpentry][3] or [Data Carpentry][4] Lesson materials
 
 <table>
-<tr><th>5/22</th><th align="left" colspan="2">Program Introduction</th></tr>
+<tr><th>5/22</th><th align="left" colspan="2">Morning: Program Introduction</th></tr>
 <tr><td></td><td width="275px">Overview of SDAL</td><td>Sallie Keller</td></tr>
 <tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Institutional Review Board (IRB) - Online</td><td></td></tr>
-<tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch</th><th></th></tr>
+<tr><td></td><td>Pizza Provided: Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td></td><td>Training: Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
+<tr><td></td><td>Training: <a href="./training/system_setup">System Setup</a></td><td>Aaron Schroeder: Server Access, RStudio Connection, Database Connection</td></tr>
 
-<tr><th>5/23</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td><div><a href="./training/system_setup">System Setup</a></div></td><td>Aaron Schroeder: Server Access, RStudio Connection, Database Connection</td></tr>
-<tr><td></td><td><a href="./training/unix_tools">Unix Tools</a></td><td>Daniel Chen: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td></tr>
+<tr><th>5/23</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: <a href="./training/unix_tools">Unix Tools</a></td><td>Daniel Chen: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td></tr>
 <tr><td></td><td>Git</td><td>Daniel Chen: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td></tr>
-<tr><th></th><th align="left" colspan="2">Summer Projects</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch</th><th></th></tr>
+<tr><td></td><td>On your own</td><td></td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
-<tr><th>5/24</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Data Ingestion & Storage</td><td>Daniel Chen: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td></tr>
+<tr><th>5/24</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Ingestion & Storage</td><td>Daniel Chen: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch</th></tr>
+<tr><td></td><td>Brownbag: The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td></td><td>Project Team Assignments</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Project Team Meetings</td><td>Project Leaders</td></tr>
 
-<tr><th>5/25</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Data Objects in R</td><td>Aaron Schroeder: Data.Frame, Data.Table, Spatial Data.Frames [point, line, polygon], Raster</td></tr>
+<tr><th>5/25</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Objects in R</td><td>Aaron Schroeder: Data.Frame, Data.Table, Spatial Data.Frames [point, line, polygon], Raster</td></tr>
 <tr><td></td><td>Functions & Looping in R</td><td>Daniel Chen: Functions & Parameters; 'for' loops vs apply family</td></tr>
-<tr><th></th><th align="left" colspan="2">Brownbag</th></tr>
-<tr><td></td><td>Social Policy Analysis Introduction</td><td>Stephanie Shipp</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch</th></tr>
+<tr><td></td><td>Brownbag: Social Policy Analysis Introduction</td><td>Stephanie Shipp</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td>Project Work</td><td></td><td></td></tr>
 
-<tr><th>5/26</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
+<tr><th>5/26</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td>Project Work</td><td></td><td></td></tr>
 
-<tr><th>5/30</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Data Profiling: Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
+<tr><th>5/30</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Profiling - Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td>Project Work</td><td></td><td></td></tr>
 
-<tr><th>5/31</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Data Profiling: Quality</td><td>Aaron Schroeder: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
-<tr><th></th><th align="left" colspan="2">Brownbag</th></tr>
-<tr><td></td><td>Data Visualization</td><td>Josh Goldstein</td></tr>
+<tr><th>5/31</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Profiling - Quality</td><td>Adrienne Rogers: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
+<tr><th></th><th align="left" colspan="2">Noon</th></tr>
+<tr><td></td><td>Brownbag: Data Visualization</td><td>Josh Goldstein</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon</th></tr>
+<tr><td>Project Work</td><td></td><td></td></tr>
 
-<tr><th>6/1</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Data Visualization in R: Plotting</td><td>Daniel Chen</td></tr>
 
-<tr><th>6/2</th><th align="left" colspan="2">Training</th></tr>
-<tr><td></td><td>Data Visualization in R: Geographic</td><td>Aaron Schroeder</td></tr>
+<tr><th>6/1</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Training: Data Visualization in R - Plotting</td><td>Daniel Chen</td></tr>
+
+<tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Visualization in R - Geographic</td><td>Aaron Schroeder</td></tr>
 </table>
 
 
