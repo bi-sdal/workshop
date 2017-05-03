@@ -49,7 +49,8 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
-<tr><th>5/30</th><th align="left" colspan="2">Morning</th></tr>
+<tr><th>5/30</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Training: Data Profiling - Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
@@ -61,8 +62,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td></td></tr>
 
-<tr><th>6/1</th><th align="left" colspan="2">Morning: Kickoff & Training</th></tr>
-<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Training: Data Visualization in R - Plotting</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th><th></th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
