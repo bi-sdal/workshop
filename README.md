@@ -70,7 +70,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: Data Analysis & Modeling</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Training: Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>Data Analysis</td><td>Vicki Lancaster</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
