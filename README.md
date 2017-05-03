@@ -63,7 +63,7 @@ The topics that will be covered
   - `ftp`, `ftps`, `sftp`
   
 #### APIs
-  - `Google`, `Arlington`
+  - `Google`, `Arlington`, `googlesheets`
 
 #### Database
   - `SQL`, `DBI/PostgreSQL`
