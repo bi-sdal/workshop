@@ -29,6 +29,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
 <tr><th>5/24</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Project Setup & Templates</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Ingestion & Storage</td><td>Daniel Chen: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
@@ -45,8 +46,8 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>5/26</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><td></td><td>Training: SQL, SQL, SQL!!! - What is SQL and why? R and SQL; Selecting data; Insert data; Combining (Joining); Sorting and removing duplicates; Filtering; Aggregation</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
 <tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
@@ -60,28 +61,78 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Training: Making Choices, Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>Data Analysis</td><td>Vicki Lancaster</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
 <tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
 
-<tr><th>6/5</th><th align="left" colspan="2">Morning</th></tr>
+<tr><th>6/5</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Training: Data Presentation & Reporting (Shiny, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>Mapping Food Deserts: A Shiny Dashboard</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/6</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Training: Machine Learning in R</td><td>Daniel Chen</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/7</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/8</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/9</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Baysian Analysis in R</td><td>Dave Higdon</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
+<tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
+<tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
+
+<tr><th>6/12</th><th align="left" colspan="2">Morning: Weekly Kickoff & Project Work</th></tr>
+<tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/13</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Training: Agent-Based Modeling with NetLogo</td><td>Bianica Pires</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Agent-Based Modeling Approaches</td><td>Mark Orr</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/14</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Social Network Analysis</td><td>Gizem Korkmaz</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/15</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+
+<tr><th>6/16</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
+<tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
+<tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
+
+<tr><th>6/23</th><th align="left" colspan="2">MIDTERMS!!</th></tr>
+
 </table>
 
 
@@ -102,52 +153,12 @@ at the [Social and Decision Analytics Laboratory][1].
   - Joins / Merges (Deterministic, Probabilistic)
   - String Matching (Insecure, Secure)
 
-## 7. Data Exploration
-
-## 8. Data Analysis / Modeling
-
-
-
 
 
 
 2. R ([cheatsheets][6])
-   - Project templates
-       - Project structure as described [here][5]
-   - Dynamic reports with knitr
-       - Markdown
-       - LaTeX
-   - Working with data
-       - Reading csv files
-       - Working with databases
-   - Manipulating dataframes
-   - Visualizing data
-   - Creating functions
-   - Making choices
-   - [GeoSpatial][4] analysis
-       - [vector data][7]
-       - [raster data][8]
-       - [geospatial][9]
-   - Model Fitting
-   - Machine Learning Basics
-3. SQL
-   - What is SQL and why?
-   - Selecting data
-   - Insert data
-   - Combining
-   - Sorting and removing duplicates
-   - Filtering
-   - Aggregation
-   - R and SQL
-4. Git
-   - Setting up Git
-   - Creating a repository
-   - Tracking changes
-   - Exploring history
-   - Ignoring Things
-   - Remotes in Github
-   - Collaboration
-   - Conflicts
+
+
 5. Make
    - Makefiles
    - Automatic Variables
