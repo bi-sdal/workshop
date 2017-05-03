@@ -46,7 +46,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>5/26</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: SQL, SQL, SQL!!! - What is SQL and why? R and SQL; Selecting data; Insert data; Combining (Joining); Sorting and removing duplicates; Filtering; Aggregation</td><td>Aaron Schroeder</td></tr>
+<tr><td></td><td>Training: SQL, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>? R and SQL; Selecting data; Insert data; Combining (Joining); Sorting and removing duplicates; Filtering; Aggregation</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
 <tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
