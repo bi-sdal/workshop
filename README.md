@@ -11,7 +11,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table>
 <tr><th>5/22</th><th align="left" colspan="2">Morning: Program Introduction</th></tr>
-<tr><td></td><td width="275px">Overview of SDAL</td><td>Sallie Keller</td></tr>
+<tr><td></td><td width="245px">Overview of SDAL</td><td>Sallie Keller</td></tr>
 <tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Pizza Provided)</th><th></th></tr>
