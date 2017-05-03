@@ -47,30 +47,41 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>5/26</th><th align="left" colspan="2">Morning</th></tr>
 <tr><td></td><td>Training: SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
+<tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
+<tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
 
 <tr><th>5/30</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
 <tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Training: Data Profiling - Structure</td><td>Aaron Schroeder: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td></tr>
+<tr><td></td><td>Data Profiling - Quality</td><td>Adrienne Rogers: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Data Profiling - Quality</td><td>Adrienne Rogers: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
-<tr><td></td><td>Data Visualization</td><td>Josh Goldstein</td></tr>
+<tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><td></td><td></td><td></td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Training: Data Visualization in R - Plotting</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/2</th><th align="left" colspan="2">Morning</th></tr>
-<tr><td></td><td>Training: Data Visualization in R - Geographic</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><td></td><td>Training: Data Analysis & Modeling</td><td>Daniel Chen</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Data Analysis</td><td>Vicki Lancaster</td></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
+<tr><td></td><td>Weekly Wrap-Up Meeting</td><td>All Project Personnel</td></tr>
+<tr><td></td><td>Weekly Fellow Discussion</td><td>DSPG Fellows</td></tr>
+
+<tr><th>6/5</th><th align="left" colspan="2">Morning</th></tr>
+<tr><td></td><td>Training: Data Presentation & Reporting (Shiny, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Mapping Food Deserts: A Shiny Dashboard</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-<tr><td></td><td>Weekly Wrap-Up Meeting</td><td></td></tr>
 </table>
 
 
@@ -95,11 +106,6 @@ at the [Social and Decision Analytics Laboratory][1].
 
 ## 8. Data Analysis / Modeling
 
-## 9. Data Presentation & Reporting
-  - `Shiny`
-    - Presentations, Dashboards
-  - Dynamic reports with knitr
-    - `Markdown`, `LaTeX`
 
 
 
