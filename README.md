@@ -91,7 +91,8 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/7</th><th align="left" colspan="2">Morning: Project Work</th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/8</th><th align="left" colspan="2">Morning: Project Work</th></tr>
@@ -160,8 +161,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/28</th><th align="left" colspan="2">Morning: Project Work</th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
-<tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 </table>
