@@ -54,9 +54,8 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>5/30</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
 <tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
-<tr><td></td><td>Training: Data Profiling - Metadata & Provenance</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Training: Data Profiling - Structure: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Data Profiling - Quality: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
+<tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
+<tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
