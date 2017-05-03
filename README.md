@@ -66,7 +66,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>6/1</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Making Choices, Data Analysis & Modeling in R</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Making Choices & Modeling in R</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
@@ -163,17 +163,12 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
+<tr><th>7/27</th><th align="left" colspan="2">POSTER SESSION!!</th></tr>
 </table>
 
 
 ?????
 <pre>
-## 6. Data Preparation & Linkage
-#### Cleaning
-#### Transformation
-#### Restructuring
-#### Linking
-
 5. Make
    - Makefiles
    - Automatic Variables
