@@ -20,20 +20,25 @@ Many of the lessons will be adapted versions of the corresponding
 <tr><th></th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td></td></tr>
 <tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
+
 <tr><th>5/23</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td><div><a href="./training/system_setup">System Setup</a></div></td><td>Aaron Schroeder: Server Access, RStudio Connection, Database Connection</td></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a></td><td>Daniel Chen: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td></tr>
 <tr><td></td><td>Git</td><td>Daniel Chen: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td></tr>
 <tr><th></th><th align="left" colspan="2">Project Overview Presentations</th></tr>
 
-<tr><th></th><th align="left" colspan="2">Brownbag</th></tr>
+<tr><th>5/24</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Ingestion & Storage</td><td>Daniel Chen: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td></tr>
+
 <tr><th>5/25</th><th align="left" colspan="2">Training</th></tr>
 <tr><td></td><td>Data Objects in R</td><td>Aaron Schroeder: Data.Frame, Data.Table, Spatial Data.Frames [point, line, polygon], Raster</td></tr>
 <tr><td></td><td>Functions & Looping in R</td><td>Daniel Chen: Functions & Parameters; 'for' loops vs apply family</td></tr>
 <tr><th></th><th align="left" colspan="2">Brownbag</th></tr>
 <tr><td></td><td>Social Policy Analysis Introduction</td><td>Stephanie Shipp</td></tr>
+
+<tr><th>5/26</th><th align="left" colspan="2">Training</th></tr>
+<tr><td></td><td>SQL, SQL, SQL!!!</td><td>Aaron Schroeder: Select, Insert, Edit, Delete; Joins (Inner, Left Outer, Right Outer)</td></tr>
 </table>
 
 
