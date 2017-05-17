@@ -11,8 +11,8 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table style="background-color: #4CAF50;">
 <tr><th>5/22</th><th align="left" colspan="2">Morning: Program Introduction</th></tr>
-<tr><td></td><td width="500px">Overview of SDAL</td><td>Sallie Keller</td></tr>
-<tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz & Aaron Schroeder</td></tr>
+<tr bgcolor="#00FF00"><td></td><td width="500px">Overview of SDAL</td><td>Sallie Keller</td></tr>
+<tr bgcolor="#00FF00"><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz & Aaron Schroeder</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Explore Ballston On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
