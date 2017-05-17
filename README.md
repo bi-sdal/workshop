@@ -22,8 +22,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>Tue 5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Git: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion (Pizza Provided)</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
