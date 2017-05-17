@@ -12,10 +12,9 @@ at the [Social and Decision Analytics Laboratory][1].
 <table>
 <tr><th>5/22</th><th align="left" colspan="2">Morning: Program Introduction</th></tr>
 <tr><td></td><td width="500px">Overview of SDAL</td><td>Sallie Keller</td></tr>
-<tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Overview of DSPG Program</td><td>Gizem Korkmaz & Aaron Schroeder</td></tr>
 <tr><td></td><td>Overview of Technology & Training Schedule</td><td>Aaron Schroeder</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: Presentation (Pizza Provided)</th></tr>
-<tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch: Explore Ballston On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
 <tr><td></td><td><a href="./training/system_setup">System Setup</a>: Git Bash, Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder / Daniel Chen</td></tr>
@@ -24,7 +23,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Git: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Introductions</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
@@ -42,7 +41,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Functions & Looping in R: Functions & Parameters; 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
-<tr><td></td><td>Social Policy Analysis Introduction</td><td>Stephanie Shipp</td></tr>
+<tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 <tr><td></td><td>Project Sponsor Team Meetings</td><td>All Project Teams</td></tr>
 
@@ -58,7 +57,8 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: On Your Own</th></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
+<tr><td></td>Social Policy Analysis Introduction<td></td><td>Stephanie Shipp</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 <tr><td></td><td>Project Sponsor Team Meetings</td><td>All Project Teams</td></tr>
 
