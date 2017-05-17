@@ -61,8 +61,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 <tr><td></td><td>Project Sponsor Team Meetings</td><td>All Project Teams</td></tr>
 
-<tr><th>Wed 5/31</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
+<tr><th>Wed 5/31</th><th align="left" colspan="2">Morning: Project Work</th></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>American Community Survey Introduction</td><td>Vicki Lancaster</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
@@ -94,7 +93,8 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
-<tr><th>Wed 6/7</th><th align="left" colspan="2">Morning: Project Work</th></tr>
+<tr><th>Wed 6/7</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
 <tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
