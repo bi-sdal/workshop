@@ -18,9 +18,9 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
 <tr><td></td><td><a href="./training//00-setup">System Setup</a>: Git Bash, Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder / Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training/10-shell">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
 
 <tr><th>Tue 5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Git: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion (Pizza Provided)</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
