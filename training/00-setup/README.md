@@ -8,3 +8,17 @@ You will not need to install R and RStuido on your computer, since all of your w
 However, you can install R and RStudio on your computer if you'd like.
 
 [1]: https://swcarpentry.github.io/workshop-template/#setup
+
+## SSH Keys
+
+open up your bash prompt/terminal and type: `ssh-keygen`
+
+## Server Connection
+
+rstudio: lightfoot.vbi.vt.edu:8787
+database (adminer): lightfoot.vbi.vt.edu:8080
+
+- Systerm: PostgresSQL
+- Server: postgresql
+
+database (postgres): lightfoot.vbi.vt.edu:5432
