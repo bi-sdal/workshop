@@ -17,7 +17,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Lunch: Explore Ballston On Your Own</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Training</th></tr>
 <tr><td></td><td>Institutional Review Board (IRB) - Online</td><td>Kim Lyman</td></tr>
-<tr><td></td><td><a href="./training/system_setup">System Setup</a>: Git Bash, Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder / Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training//00-setup">System Setup</a>: Git Bash, Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder / Daniel Chen</td></tr>
 
 <tr><th>Tue 5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/unix_tools">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
