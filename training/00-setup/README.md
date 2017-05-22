@@ -15,10 +15,8 @@ open up your bash prompt/terminal and type: `ssh-keygen`
 
 ## Server Connection
 
-rstudio: lightfoot.vbi.vt.edu:8787
-database (adminer): lightfoot.vbi.vt.edu:8080
-
-- Systerm: PostgresSQL
-- Server: postgresql
-
-database (postgres): lightfoot.vbi.vt.edu:5432
+- rstudio: lightfoot.vbi.vt.edu:8787
+- database (adminer): lightfoot.vbi.vt.edu:8080
+    - Systerm: PostgresSQL
+    - Server: postgresql
+- database (postgres): lightfoot.vbi.vt.edu:5432
