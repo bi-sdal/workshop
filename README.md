@@ -25,6 +25,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion (Baked Potato Provided)</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>Git Pull Request Collaboration</td><td>Daniel Chen</td></tr>
 
 <tr><th>Wed 5/24</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Servers and code repositories</td><td>Daniel Chen</td></tr>
