@@ -29,8 +29,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>Wed 5/24</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/30-project_template">Project Setup & Templates</a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Ingestion & Storage: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td><td>Daniel Chen</td></tr>
-<tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
-<tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
+<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Assignments & Meetings</th></tr>
 <tr><td></td><td>Project Team Assignments</td><td>Gizem Korkmaz</td></tr>
 <tr><td></td><td>Project Team Meetings</td><td>Project Leaders</td></tr>
@@ -54,6 +53,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Tue 5/30</th><th align="left" colspan="2">Morning: Weekly Kickoff & Training</th></tr>
 <tr><td></td><td>Weekly Kickoff Meeting</td><td>Gizem Korkmaz</td></tr>
+<tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (Brownbag)</th></tr>
