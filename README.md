@@ -22,7 +22,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Tue 5/23</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td><a href="./training/40-git">Git</a>: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion (Pizza Provided)</th></tr>
+<tr><th></th><th align="left" colspan="2">Afternoon: Projects Discussion (Baked Potato Provided)</th></tr>
 <tr><td></td><td>Project Overview Presentations</td><td>Project Leaders</td></tr>
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
