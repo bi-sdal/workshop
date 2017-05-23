@@ -27,6 +27,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Project Assignment Process</td><td>Gizem Korkmaz</td></tr>
 
 <tr><th>Wed 5/24</th><th align="left" colspan="2">Morning: Training</th></tr>
+<tr><td></td><td>Servers and code repositories</td><td>Daniel Chen</td></tr>
 <tr><td></td><td><a href="./training/30-project_template">Project Setup & Templates</a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Ingestion & Storage: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
