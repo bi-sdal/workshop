@@ -56,6 +56,7 @@ at the [Social and Decision Analytics Laboratory][1].
 </td><td>Daniel Chen</td></tr>
 
 <tr><th>Thu 5/25</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Code repositories, project templates, and where to put and access your data</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
 <tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 
