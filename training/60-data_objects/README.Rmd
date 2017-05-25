@@ -1,0 +1,164 @@
+---
+title: "README.md"
+author: "Daniel Chen"
+date: ""
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Working with dataframes
+
+```{r}
+
+# load the ggplot2 library to get the diamonds dataset
+library(ggplot2)
+
+# look at the diamonds dataset
+diamonds
+```
+
+
+You can see here that it prints out a portion of the dataset,
+this is because this is an `tibble` object, which is an extension of the core
+`data.frame` object in R.
+
+If you work with any package that Hadley Whickham has written,
+be prepared to see tibbles.
+
+They (for the most part) will work exactly the same as `data.frame` objects
+
+
+## Subset columns
+```{r, results='hide'}
+# get 1 column from the dataframe
+diamonds$carat
+```
+
+I'm not showing the output for the code becuse there are too many values to print to the screen
+The results of using the `$` notation for subsetting will be a `vector` of values
+
+```{r}
+# get 1 column using bracket notation
+# bracket noation [row, columns]
+diamonds[, 'carat']
+```
+
+You can visually see the difference between the `[ ]` and `$` notation of subsetting.
+`[ ]` will return a dataframe (or in this case, a tibble) back
+
+```{r}
+# get multiple columns from the dataset
+diamonds[, c('carat', 'price')]
+```
+
+## Subset rows
+```{r}
+# various ways of getting rows from data
+
+diamonds[1, ]
+diamonds[10, ]
+diamonds[c(1, 2), ]
+diamonds[c(11:20), ]
+diamonds[11:20, ]
+```
+
+## Subset rows and columns
+
+```{r}
+# getting rows and columns from your data
+diamonds[11:20, c('cut', 'color')]
+```
+
+## Getting a glimpse of your data
+
+Tibbles are nice in that they don't print all the rows out to the screen by default.
+If you end up working with other dataframe-like objects, they might print out more rows of data you will care to look at
+
+```{r}
+# get the first 6 rows of the dataset
+head(diamonds)
+
+# get the last 6 rows of the dataset
+tail(diamonds)
+```
+
+```{r}
+# get numner of rows and columns
+dim(diamonds)
+
+nrow(diamonds)
+ncol(diamonds)
+
+# get the number of columns from dim
+dim(diamonds)[2]
+```
+
+# cars dataset
+```{r}
+# look at the built in r dataset, cars
+head(cars)
+```
+
+```{r}
+# use the class function to see what you have
+class(diamonds)
+class(cars)
+```
+
+# mtcars datset
+
+```{r}
+# the mtcars datset
+head(mtcars)
+```
+
+```{r}
+# get a specific value out of the data
+mtcars[1, 'wt']
+```
+
+## getting just the columns names and row names
+```{r}
+names(mtcars)
+row.names(mtcars)
+```
+
+```{r}
+# specifying row and columns by name
+mtcars["Mazda RX4", 'wt']
+```
+
+## Creating new columns
+```{r}
+# create new column called cars
+mtcars$cars <- row.names(mtcars)
+
+mtcars$cyl_wt <- mtcars$cyl / mtcars$wt
+
+```
+
+## Getting summary statistics on your data
+summary(mtcars)
+
+## Using `attach`
+
+The reason why you would *not* want to use `attach` in your code is becuase it mucks up the variables
+you have access to in your R code.
+
+It can be very easy to forget which what the column names are in your dataset.
+
+```{r}
+# dont do this
+attach(mtcars)
+mpg
+detach(mtcars)
+
+# do this idead, if you want
+with(mtcars, mpg)
+```
