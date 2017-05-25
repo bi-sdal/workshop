@@ -55,137 +55,17 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
 <tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
 
-<tr><th>Thu 6/8</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
 <tr><th>Fri 6/9</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Training: Baysian Analysis in R</td><td>Dave Higdon</td></tr>
-
-<tr><th>Mon 6/12</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 6/13</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>Wed 6/14</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Training: Agent-Based Modeling with NetLogo</td><td>Bianica Pires</td></tr>
 <tr><td></td><td>Agent-Based Modeling Approaches</td><td>Mark Orr</td></tr>
 
-<tr><th>Thu 6/15</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Fri 6/16</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work & Weekly Wrap-Up</th></tr>
-
-<tr><th>Mon 6/19</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 6/20</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
 <tr><th>Wed 6/21</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Social Network Analysis</td><td>Gizem Korkmaz</td></tr>
 
-<tr><th>Thu 6/22</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
 <tr><th>Fri 6/23</th><th align="left" colspan="2">MIDTERMS!!</th></tr>
-
-<tr><th>Mon 6/26</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 6/27</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Wed 6/28</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Thu 6/29</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Fri 6/30</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Mon 7/3</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Wed 7/5</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Thu 7/6</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Fri 7/7</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Mon 7/10</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 7/11</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Wed 7/12</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Thu 7/13</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Fri 7/14</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Mon 7/17</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 7/18</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Wed 7/19</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Thu 7/20</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Fri 7/21</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Mon 7/24</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Tue 7/25</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
-
-<tr><th>Wed 7/26</th><th align="left" colspan="2"></th></tr>
-<tr><th></th><th align="left" colspan="2">Lunch (On Your Own)</th></tr>
-<tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
 
 <tr><th>Thu 7/27</th><th align="left" colspan="2">POSTER SESSION!!</th></tr>
 <tr><th></th><th align="left" colspan="2">Speakers: Nancy Potok and David Yokum</th></tr>
