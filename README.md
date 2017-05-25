@@ -11,17 +11,49 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td><a href="./training//00-setup">System Setup</a>: Git Bash, Server Access, RStudio Connection, Database Connection</td><td>Aaron Schroeder / Daniel Chen</td></tr>
-<tr><td></td><td><a href="./training/10-shell">Unix Tools</a>: Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano); Shell Scripts (running shell scripts and understanding the working directory); SSH (connecting to a remote server/computer with secure shell)</td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training//00-setup">System Setup</a>: 
+<ul>
+<li>Git Bash</li>
+<li>Server Access</li>
+<li>RStudio Connection</li>
+<li>Database Connection</li>
+</ul>
+</td><td>Aaron Schroeder / Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training/10-shell">Unix Tools</a>:
+<ul>
+<li>Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano)</li>
+<li>Shell Scripts (running shell scripts and understanding the working directory)</li>
+<li>SSH (connecting to a remote server/computer with secure shell)</li>
+</ul>
+</td><td>Daniel Chen</td></tr>
 
 <tr><th>Tue 5/23</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td><a href="./training/40-git">Git</a>: Setting up Git; Creating a repository; Tracking changes; Exploring history; Ignoring Things; Remotes in Github; Collaboration; Conflicts</td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training/40-git">Git</a>
+<ul>
+<li>Setting up Git</li>
+<li>Creating a repository</li>
+<li>Tracking changes</li>
+<li>Exploring history</li>
+<li>Ignoring Things</li>
+<li>Remotes in Github</li>
+<li>Collaboration</li>
+<li>Conflicts</li>
+</ul>
+</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Git Pull Request Collaboration</td><td>Daniel Chen</td></tr>
 
 <tr><th>Wed 5/24</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Servers and code repositories</td><td>Daniel Chen</td></tr>
 <tr><td></td><td><a href="./training/30-project_template">Project Setup & Templates</a></td><td>Daniel Chen</td></tr>
-<tr><td></td><td>Data Ingestion & Storage: RCUrl (ftp, ftps, sftp); APIs (Google Dev, Arlington, googlesheets); Database (SQL, DBI/PostgreSQL); Files (csv, Excel, RData, zip)</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Data Ingestion & Storage
+<ul>
+<li>Files (csv, Excel, RData, zip)</li>
+<li>RCUrl (ftp, ftps, sftp)</li>
+<li>JSON</li>
+<li>APIs (Google Dev, Arlington, googlesheets)</li>
+<li>Database (SQL, DBI/PostgreSQL)</li>
+</ul>
+</td><td>Daniel Chen</td></tr>
 
 <tr><th>Thu 5/25</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
