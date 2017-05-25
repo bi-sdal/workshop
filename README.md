@@ -39,7 +39,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>Thu 5/25</th><th align="left" colspan="2">Morning: Training</th></tr>
 <tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Functions & Looping in R: Functions & Parameters; 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
 <tr><td></td><td>Research Ethics</td><td>Sallie Keller, Gizem Korkmaz, Aaron Schroeder</td></tr>
 <tr><th></th><th align="left" colspan="2">Afternoon: Project Work</th></tr>
