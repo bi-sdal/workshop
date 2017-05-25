@@ -1,0 +1,243 @@
+---
+title: "README"
+author: "Daniel Chen"
+date: ""
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+To prepare the data example I will use the `mtcars` dataframe,
+and create a new column, `cars` by passing in the `row.name`
+
+```{r}
+mtcars$cars <- row.names(mtcars)
+```
+
+
+# Functions
+
+```{r}
+my_mean <- function(){
+  print(3)
+}
+
+my_mean()
+```
+
+```{r}
+my_mean <- function(x, y){
+  print(3)
+}
+
+my_mean()
+
+my_mean(10, 20)
+```
+
+
+## Functions will automaticall return the last caculated value
+```{r}
+my_mean <- function(x, y) {
+    (x + y) / 2
+}
+```
+
+## Explicitly return a value in a function
+```{r}
+my_mean <- function(x, y) {
+    return((x + y) / 2)
+}
+```
+
+```{r}
+my_mean <- function(x, y) {
+    val <- (x + y) / 2
+    return(val)
+}
+```
+
+# Functions on data
+
+The summary function worked on our data column-by-column.
+
+You can write your own function that work column-by-column, or row0-by-row by using `apply`
+
+
+## Visually check your function
+
+When starting to write a function that you will apply on your data,
+it's good to write the function on its own with the parameters you will use to visually inspect it
+
+```{r}
+# create a function that calculates the ratio of a cyl_val and wt_val
+# append this ratio to a car_name separated by a dash
+rename_car <- function(cyl_val, wt_value, car_name) {
+    cyl_wt_ratio <- as.numeric(cyl_val) / as.numeric(wt_value)
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+
+rename_car(10, 20, 'pizaaaaaaaaa')
+```
+
+## Preparing your function for an `apply`
+
+The way apply works is the first parameter is the dataframe you will work on
+
+The second parameter, `MARGIN` will tell apply to work row-by-row (`1`)
+or column-by-column (`2`).
+
+The last parameter is the function you want to apply,
+note that you do not need the round brackets when you pass in functions into apply,
+just the function name.
+
+To convert your function to be `apply` ready, you replace the parameters
+of your function with a new parameter, e.g., `row_data` or `col_data`.
+then within the function, you will use the subsetting methods to subset the rows or columns your function needs
+
+```{r}
+rename_car <- function(row_data) {
+    cyl_val <- row_data['cyl']
+    wt_value <- row_data['wt']
+    car_name <- row_data['cars']
+
+    cyl_wt_ratio <- as.numeric(cyl_val) / as.numeric(wt_value)
+
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+```
+
+with your new function, you can then apply it to your data
+
+```{r}
+apply(mtcars, 1, rename_car)
+```
+
+You can see this returns a vector of values, but we want to assign this to a new column
+
+```{r}
+mtcars$car_ratio <- apply(mtcars, 1, rename_car)
+
+head(mtcars)
+```
+
+
+# Common mistakes
+
+What went wrong when I was live coding?
+
+Here's the code I originally typed
+
+```{r}
+rename_car <- function(cyl_val, wt_value, car_name) {
+    cyl_wt_ratio <- as.numeric(cyl_val) / as.numeric(wt_value)
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+
+```
+
+The first time I `apply`ified the function I wrote this:
+
+```{r}
+rename_car <- function(row_data, cyl_val, wt_value, car_name) {
+    cyl_wt_ratio <- as.numeric(cyl_val) / as.numeric(wt_value)
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+
+```
+
+Because the way apply works is that the row (or column) data all gets passed into the
+first argument of the function, but the output was 'strange'/wrong.
+
+I attempted to fix this by subsetting the 'columns' that the row is passed in.
+
+```{r, error=TRUE}
+rename_car <- function(row_data) {
+    cyl_val <- row_data[, 'cyl']
+    wt_value <- row_data[, 'wt']
+    car_name <- row_data[, 'cars']
+
+    cyl_wt_ratio <- cyl_val / wt_value
+
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+
+apply(mtcars, 1, rename_car)
+```
+
+That didn't work because the row of data got passed in.
+This row or `vector` can't be subset by using the `[, ]` notation (not the comma)
+because there is no way you can subset both a row and column on a 1-dimentional thing (which a row/vector is)
+
+So I had to remove the comma from the subsetting
+
+```{r, error=TRUE}
+rename_car <- function(row_data) {
+    cyl_val <- row_data['cyl']
+    wt_value <- row_data['wt']
+    car_name <- row_data['cars']
+
+    cyl_wt_ratio <- cyl_val / wt_value
+
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+
+apply(mtcars, 1, rename_car)
+```
+
+Next problem was this `non-numeric argument to binary operator` error.
+
+It tells me that the error occurs when trying to calculate `cyl_val/wt_value`.
+
+the `binary operator` the error message is refering to is the division `/`,
+and it is telling me that values passed into the division is not a `numeric` value.
+
+We fix this by forcing the values to be `numeric` by using the `as.numeric` function
+
+```{r, error=TRUE}
+rename_car <- function(row_data) {
+    cyl_val <- row_data['cyl']
+    wt_value <- row_data['wt']
+    car_name <- row_data['cars']
+
+    cyl_wt_ratio <- as.numeric(cyl_val) / as.numeric(wt_value)
+
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+```
+
+you can also do the conversion at the very beginning
+
+```{r, error=TRUE}
+rename_car <- function(row_data) {
+    cyl_val <- as.numeric(row_data['cyl'])
+    wt_value <- as.numeric(row_data['wt'])
+    car_name <- row_data['cars']
+
+    cyl_wt_ratio <- cyl_val / wt_value
+
+    new_name <- paste(car_name, '-', cyl_wt_ratio)
+    return(new_name)
+}
+```
+
+In R (and statistical datasets), we know each column will be the same data type (character, numeric, etc)
+
+But in statistical datasets, rows can be of mixed types.
+
+What R does in the apply is that when the row data is passed,
+it converts everything into the data type that is common to all the row values, a character vector (aka string)
+
+which is why we need to manually convert the `cyl` and `wt` values into numerics.
