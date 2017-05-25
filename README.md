@@ -37,7 +37,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Project Team Meetings</td><td>Project Leaders</td></tr>
 
 <tr><th>Thu 5/25</th><th align="left" colspan="2">Morning: Training</th></tr>
-<tr><td></td><td>Data Objects in R: <a href='.training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Functions & Looping in R: Functions & Parameters; 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 <tr><th></th><th align="left" colspan="2">Lunch: Presentation (Brownbag)</th></tr>
