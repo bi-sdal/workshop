@@ -57,14 +57,23 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Thu 5/25</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Code repositories, project templates, and where to put and access your data</td><td>Daniel Chen</td></tr>
-<tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a> & Data.Tables</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 
 <tr><th>Fri 5/26</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td>Training: SQL, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>? R and SQL; Selecting data; Insert data; Combining (Joining); Sorting and removing duplicates; Filtering; Aggregation</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
+<tr><td></td><td>Training: SQL, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>?
+<ul>
+<li>R and SQL</li>
+<li>Selecting data</li>
+<li>Insert data</li>
+<li>Combining (Joining)</li>
+<li><a href='http://swcarpentry.github.io/sql-novice-survey/'>Sorting and removing duplicates; Filtering; Aggregation</a></li>
+</ul>
+</td><td>Aaron Schroeder</td></tr>
+
 
 <tr><th>Tue 5/30</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
