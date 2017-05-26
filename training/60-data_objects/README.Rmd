@@ -162,3 +162,102 @@ detach(mtcars)
 # do this idead, if you want
 with(mtcars, mpg)
 ```
+
+# Conditonal Subsetting
+
+We can perform conditional subsetting by using the way we subset dataframes: `[ , ]`
+
+```{r}
+summary(mtcars)
+```
+
+Let's subset our data and look for all the cars where the `mpg` is less than `15.43`
+
+```{r}
+mtcars[mtcars$mpg < 15.43, ]
+```
+
+The reason why this works is becuase the row subsetter returns a vector of `TRUE`/`FALSE` values
+
+```{r}
+mtcars$mpg < 15.43
+```
+
+When you give a dataframe row or column slicer a vector of booleans (i.e., TRUE/FALSE),
+it will return the rows and/or columns that have a TRUE.
+
+## Subsetting a single column with `[ ]`
+
+Subsetting and slicing dataframs can be weird.
+when you subset a `data.frame` that ends up with 1 column it will come back as a `vector` and not a `data.frame`
+
+Note, `tibble` objects don't do this.
+
+You can prevent this automatic conversion to a vector by passing in the `drop = FALSE` into the `[ ]` subsetter
+
+```{r}
+mtcars[mtcars$mpg < 15.43, 'cyl', drop = FALSE]
+```
+
+Otherwise you will have to manually convert the vector back to a `data.frame` by using `as.data.frame`
+
+```{r}
+as.data.frame(mtcars[mtcars$mpg < 15.43, 'cyl'])
+```
+
+But then you'll have to end up changing the column name
+
+```{r}
+bool_df <- as.data.frame(mtcars[mtcars$mpg < 15.43, 'cyl'])
+names(bool_df) <- 'cyl'
+bool_df
+```
+
+## Multiple boolean conditions
+
+You can use the `|` or `&` to have an OR or AND operator in your boolean condition, respectively.
+
+```{r}
+mtcars[mtcars$mpg < 15.43 | mtcars$cyl == 4, ]
+```
+
+```{r}
+mtcars[mtcars$mpg < 15.43 & mtcars$cyl == 4, ]
+```
+
+
+# NA Missing Values
+
+Missing values in R are coded as an `NA` value
+
+```{r}
+NA
+```
+
+
+You can't use the `==` operator to check for missing values
+
+```{r}
+NA == NA
+```
+
+```{r}
+NA == TRUE
+```
+
+```{r}
+NA == FALSE
+```
+
+```{r}
+NA == 3
+```
+
+
+You have to use a special function to check for missing values
+
+```{r}
+is.na(NA)
+```
+
+
