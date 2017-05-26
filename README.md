@@ -61,6 +61,12 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 
 <tr><th>Fri 5/26</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>
+<ul>
+<li>Knitr/RMarkdown Basics</li>
+<li><a href='./training/60-data_objects#conditonal-subsetting'>Conditional Subsetting Dataframes</a></li>
+<li><a href='./training/60-data_objects#na-missing-values'>Missing Values</a></li>
+<ul> and </td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Training: <a href='./training/80-sql'>SQL</a>, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>?
 <ul>
 <li>R and SQL</li>
