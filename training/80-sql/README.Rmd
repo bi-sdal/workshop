@@ -1,0 +1,138 @@
+---
+title: "r_sql"
+author: "Daniel Chen"
+date: ''
+output:
+  html_document: 
+    keep_md: yes
+    toc: yes
+  html_notebook: default
+---
+
+```{r setup, include=FALSE}
+
+SUPER_SECRET_PASSWORD <- ""
+
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Connecting to a SQL database
+
+```{r, eval=FALSE}
+library(sdalr)
+library(DBI)
+library(RPostgreSQL)
+
+con <- con_db(dbname = 'arlington', user = 'chend')
+```
+
+```{r, echo=FALSE}
+# DELETE PASSWORD WHEN COMMITING
+library(sdalr)
+library(DBI)
+library(RPostgreSQL)
+con <-  con_db(dbname = 'arlington', user = 'chend', pass = SUPER_SECRET_PASSWORD)
+```
+
+```{r}
+con
+```
+
+# Getting (Querrying) data from database in R
+
+```{r}
+df <- dbGetQuery(con, "")
+head(df)
+```
+
+You can also use an `sql` chunk
+```
+```{sql connection=con}
+SELECT * FROM fire.medic_unit_movement_summary_2013;
+```
+```
+
+```{sql connection=con}
+SELECT * FROM fire.medic_unit_movement_summary_2013;
+```
+
+# Creating Tables
+
+Everyone should have a database named their pid.
+
+```{r, eval=FALSE}
+con <- con_db(dbname = 'chend', user = 'chend')
+```
+
+```{r, echo=FALSE}
+con <-  con_db(dbname = 'chend', user = 'chend', pass = SUPER_SECRET_PASSWORD)
+```
+
+```{r, results='hide'}
+# delete a table (you have permissino to do)
+dbSendQuery(con, "DROP TABLE customers;")
+
+# create a new table
+dbSendQuery(con, "CREATE TABLE customers (customer_no INTEGER, first_name TEXT, last_name TEXT);")
+
+# add row information into a table
+dbSendQuery(con, "INSERT INTO customers (customer_no, first_name, last_name) VALUES (1, 'MC', 'Hammer')")
+dbSendQuery(con, "INSERT INTO customers (customer_no, first_name, last_name) VALUES (2, 'Hammer', 'Time')")
+```
+
+
+```{r}
+dbGetQuery(con, "SELECT * from customers;")
+```
+
+```{r}
+# save results to an R data frame
+
+df <- dbGetQuery(con, "SELECT * from customers;")
+df
+```
+
+# Get data in and out of chunks
+
+When working with chunks that use different language engines, you will need a way to pass
+R values into the engine, and get values back into the R environment
+
+## Get R data into chucnks
+
+To get an `R` variable into a chunk, you prepend the R variable by a `?`, e.g., `?x` if you want to use the variable `x` in the chunk
+
+```{r}
+x <- 'Time'
+```
+
+```
+```{sql connection=con}
+SELECT * FROM ?x;
+```
+```
+
+```{sql connection=con}
+SELECT * FROM customers WHERE last_name = ?x;
+```
+
+## Get chucnk values into R
+
+You can get values and results back into the R enviornment by using the `output.var` chunk option
+
+```
+```{sql connection=con, output.var=df_sql}
+SELECT * FROM ?x;
+```
+```
+
+```{sql connection=con, output.var='df_sql'}
+SELECT * FROM customers WHERE last_name = 'Hammer';
+```
+
+In R:
+
+```{r}
+df_sql
+```
+
