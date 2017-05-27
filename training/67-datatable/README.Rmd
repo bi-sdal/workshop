@@ -2,10 +2,10 @@
 title: "data.table"
 author: "Aaron Schroeder"
 date: ""
-output: 
-  html_document: 
-    keep_md: yes
-    toc: yes
+output:
+  md_document:
+    variant: markdown_github 
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -19,10 +19,13 @@ getwd()
 
 if (interactive()) {
   data_file <- "data/GB_full.csv.zip"
+  data_dir <- "data/"
 } else {
   data_file <- "../../data/GB_full.csv.zip"
+  data_dir <- '../../data/'
 }
 data_file
+data_dir
 ```
 ### Load Data
 ```{r cache=TRUE}
@@ -31,7 +34,7 @@ data_file
 if (!file.exists(data_file)) {
     download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_path)
 }
-DT <- fread(unzip(data_path))
+DT <- fread(unzip(zipfile = data_file, exdir = data_dir))
 ```
 
 ```{r}
