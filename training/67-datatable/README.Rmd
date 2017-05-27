@@ -1,0 +1,108 @@
+---
+title: "data.table"
+author: "Aaron Schroeder"
+date: ""
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(data.table)
+
+getwd()
+
+if (interactive()) {
+  data_file <- "data/GB_full.csv.zip"
+} else {
+  data_file <- "../../data/GB_full.csv.zip"
+}
+data_file
+```
+### Load Data
+```{r cache=TRUE}
+!file.exists(data_file)
+
+if (!file.exists(data_file)) {
+    download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_path)
+}
+DT <- fread(unzip(data_path))
+```
+
+```{r}
+head(DT)
+tail(DT)
+```
+
+### How to subset columns (note use of .(column list) syntax)
+```{r}
+#subsetting columns
+sub_columns <- DT[, .(V2,V3,V4)]
+head(sub_columns)
+```
+
+### How to subset rows (note no need for following comma)
+```{r}
+#subsetting rows
+sub_rows <- DT[V4 == "England" & V3 == "Beswick"]
+head(sub_rows)
+```
+
+### How to order variables in ascending or descending order (note use of "-" to connote descending order)
+```{r}
+#ordering columns
+dt_order <- DT[order(V4, -V8)]
+head(dt_order)
+```
+
+### How to add a column
+```{r}
+#add a new column - here we are adding columns V10 and V11 to create new column V_New
+DT[, V_New := V10 + V11]
+```
+
+### How to update a columns value based on it's current value
+```{r}
+#update row values - here we change the value to "Abr City" where it equals "Aberdeen City"
+DT[V8 == "Aberdeen City", V8 := "Abr City"]
+```
+
+### How to update a columns value based on another column's value
+```{r}
+#update row values - here we change the value of column V8 to "Aberdeen City" where column V6 equals "Aberdeen City"
+DT[V6 == "Aberdeen City", V8 := "Aberdeen City"]
+```
+
+### How to delete a column
+```{r}
+#delete a column - here we delete 2 columns
+DT [,c("V6","V7") := NULL ]
+```
+
+### You can Chain Commands Together!
+```{r}
+DT[V8 == "Aberdeen City", V8 := "Abr City"][, V_New := V10 + V11][,c("V6","V7") := NULL]
+```
+
+### Use functions (e.g. aggregates) on a column
+```{r}
+#compute the average - note you must remove NAs for an aggreagte function to work
+DT[, .(average = mean(V10, na.rm = TRUE))]
+```
+
+### Use functions (e.g. aggregates) on a column with grouping
+```{r}
+#compute the average
+DT[, .(average = mean(V10, na.rm = TRUE)), by = V4]
+```
+
+### Get counts by grouping
+```{r}
+#compute the count
+DT[, .N, by = V4]
+```

@@ -4,3 +4,9 @@
 .Ruserdata
 
 *.html
+
+data/*
+
+training/*/*_cache/*
+
+*.csv
