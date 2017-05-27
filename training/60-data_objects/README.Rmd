@@ -259,5 +259,3 @@ You have to use a special function to check for missing values
 ```{r}
 is.na(NA)
 ```
-
-
