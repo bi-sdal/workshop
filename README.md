@@ -79,17 +79,25 @@ at the [Social and Decision Analytics Laboratory][1].
 
 
 <tr><th>Tue 5/30</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Group by statments</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Making Choices & Modeling in R</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Loops</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Reshaping data / tidy data</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Regular Expressions</td><td>Daniel Chen</td></tr>
+
+<tr><th>Wed 5/31</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td><a href='https://cran.r-project.org/web/packages/acs/acs.pdf'>ACS</a></td><td>Vicki Lancaster</td></tr>
+
+
+<tr><th>Thu 6/1</th><th align="left" colspan="2"></th></tr>
+
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
 
-<tr><th>Wed 5/31</th><th align="left" colspan="2"></th></tr>
-
-<tr><th>Thu 6/1</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td>Making Choices & Modeling in R</td><td>Daniel Chen</td></tr>
-
 <tr><th>Fri 6/2</th><th align="left" colspan="2"></th></tr>
+
 <tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
 
 <tr><th>Mon 6/5</th><th align="left" colspan="2"></th></tr>
