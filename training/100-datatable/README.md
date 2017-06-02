@@ -1,15 +1,17 @@
 -   [Load Data](#load-data)
--   [How to subset columns (note use of .(column list) syntax)](#how-to-subset-columns-note-use-of-.column-list-syntax)
--   [How to subset rows (note no need for following comma)](#how-to-subset-rows-note-no-need-for-following-comma)
--   [How to order variables in ascending or descending order (note use of "-" to connote descending order)](#how-to-order-variables-in-ascending-or-descending-order-note-use-of---to-connote-descending-order)
--   [How to add a column](#how-to-add-a-column)
--   [How to update a columns value based on it's current value](#how-to-update-a-columns-value-based-on-its-current-value)
--   [How to update a columns value based on another column's value](#how-to-update-a-columns-value-based-on-another-columns-value)
--   [How to delete a column](#how-to-delete-a-column)
--   [You can Chain Commands Together!](#you-can-chain-commands-together)
+-   [Subset columns (note use of .(column list) syntax)](#subset-columns-note-use-of-.column-list-syntax)
+-   [Subset rows (note no need for following comma)](#subset-rows-note-no-need-for-following-comma)
+-   [Order variables in ascending or descending order (note use of "-" to connote descending order)](#order-variables-in-ascending-or-descending-order-note-use-of---to-connote-descending-order)
+-   [Add a column](#add-a-column)
+-   [Update a columns value based on it's current value](#update-a-columns-value-based-on-its-current-value)
+-   [Update a columns value based on another column's value](#update-a-columns-value-based-on-another-columns-value)
+-   [Delete a column](#delete-a-column)
+-   [Chain Commands Together!](#chain-commands-together)
 -   [Use functions (e.g. aggregates) on a column](#use-functions-e.g.-aggregates-on-a-column)
 -   [Use functions (e.g. aggregates) on a column with grouping](#use-functions-e.g.-aggregates-on-a-column-with-grouping)
 -   [Get counts by grouping](#get-counts-by-grouping)
+-   [Reshaping](#reshaping)
+-   [Applying functions](#applying-functions)
 
 ``` r
 library(data.table)
@@ -17,7 +19,7 @@ library(data.table)
 getwd()
 ```
 
-    ## [1] "/home/dchen/git/vt/workshop/training/67-datatable"
+    ## [1] "/home/dchen/git/hub/sdal/workshop/training/100-datatable"
 
 ``` r
 if (interactive()) {
@@ -48,15 +50,19 @@ data_dir
 
 ``` r
 if (!file.exists(data_file)) {
-    download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_path)
+    download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_dir)
 }
+```
+
+``` r
 DT <- fread(unzip(zipfile = data_file, exdir = data_dir))
 ```
 
     ## 
-    Read 49.4% of 1720673 rows
-    Read 73.2% of 1720673 rows
-    Read 1720673 rows and 12 (of 12) columns from 0.214 GB file in 00:00:04
+    Read 37.8% of 1720673 rows
+    Read 64.5% of 1720673 rows
+    Read 90.7% of 1720673 rows
+    Read 1720673 rows and 12 (of 12) columns from 0.214 GB file in 00:00:05
 
 ``` r
 head(DT)
@@ -96,11 +102,17 @@ tail(DT)
     ## 5: Shetland Islands S12000027 59.89157 -1.313847   6
     ## 6: Shetland Islands S12000027 59.89239 -1.310899   6
 
-### How to subset columns (note use of .(column list) syntax)
+``` r
+dim(DT)
+```
+
+    ## [1] 1720673      12
+
+### Subset columns (note use of .(column list) syntax)
 
 ``` r
 #subsetting columns
-sub_columns <- DT[, .(V2,V3,V4)]
+sub_columns <- DT[, .(V2, V3, V4)]
 head(sub_columns)
 ```
 
@@ -112,7 +124,7 @@ head(sub_columns)
     ## 5: AB10 1AH George St/Harbour Ward Scotland
     ## 6: AB10 1AL George St/Harbour Ward Scotland
 
-### How to subset rows (note no need for following comma)
+### Subset rows (note no need for following comma)
 
 ``` r
 #subsetting rows
@@ -135,7 +147,7 @@ head(sub_rows)
     ## 5: East Riding of Yorkshire E06000011 53.91834 -0.4599795   6
     ## 6: East Riding of Yorkshire E06000011 53.91854 -0.4399180   6
 
-### How to order variables in ascending or descending order (note use of "-" to connote descending order)
+### Order variables in ascending or descending order (note use of "-" to connote descending order)
 
 ``` r
 #ordering columns
@@ -158,35 +170,121 @@ head(dt_order)
     ## 5:   4
     ## 6:   4
 
-### How to add a column
+### Add a column
 
 ``` r
 #add a new column - here we are adding columns V10 and V11 to create new column V_New
 DT[, V_New := V10 + V11]
+head(DT)
 ```
 
-### How to update a columns value based on it's current value
+    ##    V1       V2                     V3       V4  V5            V6        V7
+    ## 1: GB     AB10               Aberdeen Scotland SCT Aberdeenshire          
+    ## 2: GB AB10 1AB George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 3: GB AB10 1AF George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 4: GB AB10 1AG George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 5: GB AB10 1AH George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 6: GB AB10 1AL George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ##               V8        V9      V10       V11 V12    V_New
+    ## 1:                               NA        NA   4       NA
+    ## 2: Aberdeen City S12000033 57.14961 -2.096916   6 55.05269
+    ## 3: Aberdeen City S12000033 57.14871 -2.097806   6 55.05090
+    ## 4: Aberdeen City S12000033 57.14907 -2.096997   6 55.05207
+    ## 5: Aberdeen City S12000033 57.14808 -2.094664   6 55.05342
+    ## 6: Aberdeen City S12000033 57.14954 -2.095412   6 55.05413
+
+### Update a columns value based on it's current value
+
+``` r
+head(DT[V8 == "Aberdeen City"])
+```
+
+    ##    V1       V2                     V3       V4  V5            V6        V7
+    ## 1: GB AB10 1AB George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 2: GB AB10 1AF George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 3: GB AB10 1AG George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 4: GB AB10 1AH George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 5: GB AB10 1AL George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 6: GB AB10 1AN George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ##               V8        V9      V10       V11 V12    V_New
+    ## 1: Aberdeen City S12000033 57.14961 -2.096916   6 55.05269
+    ## 2: Aberdeen City S12000033 57.14871 -2.097806   6 55.05090
+    ## 3: Aberdeen City S12000033 57.14907 -2.096997   6 55.05207
+    ## 4: Aberdeen City S12000033 57.14808 -2.094664   6 55.05342
+    ## 5: Aberdeen City S12000033 57.14954 -2.095412   6 55.05413
+    ## 6: Aberdeen City S12000033 57.14972 -2.094735   6 55.05498
 
 ``` r
 #update row values - here we change the value to "Abr City" where it equals "Aberdeen City"
 DT[V8 == "Aberdeen City", V8 := "Abr City"]
+head(DT[V8 == "Abr City"])
 ```
 
-### How to update a columns value based on another column's value
+    ##    V1       V2                     V3       V4  V5            V6        V7
+    ## 1: GB AB10 1AB George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 2: GB AB10 1AF George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 3: GB AB10 1AG George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 4: GB AB10 1AH George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 5: GB AB10 1AL George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 6: GB AB10 1AN George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ##          V8        V9      V10       V11 V12    V_New
+    ## 1: Abr City S12000033 57.14961 -2.096916   6 55.05269
+    ## 2: Abr City S12000033 57.14871 -2.097806   6 55.05090
+    ## 3: Abr City S12000033 57.14907 -2.096997   6 55.05207
+    ## 4: Abr City S12000033 57.14808 -2.094664   6 55.05342
+    ## 5: Abr City S12000033 57.14954 -2.095412   6 55.05413
+    ## 6: Abr City S12000033 57.14972 -2.094735   6 55.05498
+
+### Update a columns value based on another column's value
 
 ``` r
 #update row values - here we change the value of column V8 to "Aberdeen City" where column V6 equals "Aberdeen City"
 DT[V6 == "Aberdeen City", V8 := "Aberdeen City"]
 ```
 
-### How to delete a column
+### Delete a column
+
+``` r
+head(DT)
+```
+
+    ##    V1       V2                     V3       V4  V5            V6        V7
+    ## 1: GB     AB10               Aberdeen Scotland SCT Aberdeenshire          
+    ## 2: GB AB10 1AB George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 3: GB AB10 1AF George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 4: GB AB10 1AG George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 5: GB AB10 1AH George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 6: GB AB10 1AL George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ##               V8        V9      V10       V11 V12    V_New
+    ## 1:                               NA        NA   4       NA
+    ## 2: Aberdeen City S12000033 57.14961 -2.096916   6 55.05269
+    ## 3: Aberdeen City S12000033 57.14871 -2.097806   6 55.05090
+    ## 4: Aberdeen City S12000033 57.14907 -2.096997   6 55.05207
+    ## 5: Aberdeen City S12000033 57.14808 -2.094664   6 55.05342
+    ## 6: Aberdeen City S12000033 57.14954 -2.095412   6 55.05413
 
 ``` r
 #delete a column - here we delete 2 columns
-DT [,c("V6","V7") := NULL ]
+DT [, c("V6","V7") := NULL ]
+head(DT)
 ```
 
-### You can Chain Commands Together!
+    ##    V1       V2                     V3       V4  V5            V8        V9
+    ## 1: GB     AB10               Aberdeen Scotland SCT                        
+    ## 2: GB AB10 1AB George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 3: GB AB10 1AF George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 4: GB AB10 1AG George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 5: GB AB10 1AH George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ## 6: GB AB10 1AL George St/Harbour Ward Scotland SCT Aberdeen City S12000033
+    ##         V10       V11 V12    V_New
+    ## 1:       NA        NA   4       NA
+    ## 2: 57.14961 -2.096916   6 55.05269
+    ## 3: 57.14871 -2.097806   6 55.05090
+    ## 4: 57.14907 -2.096997   6 55.05207
+    ## 5: 57.14808 -2.094664   6 55.05342
+    ## 6: 57.14954 -2.095412   6 55.05413
+
+### Chain Commands Together!
 
 ``` r
 DT[V8 == "Aberdeen City", V8 := "Abr City"][, V_New := V10 + V11][,c("V6","V7") := NULL]
@@ -235,3 +333,47 @@ DT[, .N, by = V4]
     ## 3: Northern Ireland     417
     ## 4:            Wales   93123
     ## 5:                       97
+
+### Reshaping
+
+<http://seananderson.ca/2013/10/19/reshape.html>
+
+<https://www.r-bloggers.com/how-to-reshape-data-in-r-tidyr-vs-reshape2/>
+
+#### Melt
+
+``` r
+aqdt <- as.data.table(airquality)
+  
+aqdt_melt <- data.table::melt(data = aqdt, id.vars = c('Month', 'Day'), measure.vars = c('Ozone', 'Solar.R', 'Wind'),
+                 variable.name = 'measurement', value.name = 'reading')
+```
+
+    ## Warning in melt.data.table(data = aqdt, id.vars = c("Month", "Day"),
+    ## measure.vars = c("Ozone", : 'measure.vars' [Ozone, Solar.R, Wind] are not
+    ## all of the same type. By order of hierarchy, the molten data value column
+    ## will be of type 'double'. All measure variables not of type 'double' will
+    ## be coerced to. Check DETAILS in ?melt.data.table for more on coercion.
+
+#### Cast
+
+``` r
+data.table::dcast(aqdt_melt, Month + Day ~ measurement)
+```
+
+    ## Using 'reading' as value column. Use 'value.var' to override
+
+    ##      Month Day Ozone Solar.R Wind
+    ##   1:     5   1    41     190  7.4
+    ##   2:     5   2    36     118  8.0
+    ##   3:     5   3    12     149 12.6
+    ##   4:     5   4    18     313 11.5
+    ##   5:     5   5    NA      NA 14.3
+    ##  ---                             
+    ## 149:     9  26    30     193  6.9
+    ## 150:     9  27    NA     145 13.2
+    ## 151:     9  28    14     191 14.3
+    ## 152:     9  29    18     131  8.0
+    ## 153:     9  30    20     223 11.5
+
+### Applying functions

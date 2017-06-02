@@ -32,62 +32,75 @@ data_dir
 !file.exists(data_file)
 
 if (!file.exists(data_file)) {
-    download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_path)
+    download.file("http://download.geonames.org/export/zip/GB_full.csv.zip", data_dir)
 }
+```
+
+```{r}
 DT <- fread(unzip(zipfile = data_file, exdir = data_dir))
 ```
+
 
 ```{r}
 head(DT)
 tail(DT)
+dim(DT)
 ```
 
-### How to subset columns (note use of .(column list) syntax)
+### Subset columns (note use of .(column list) syntax)
 ```{r}
 #subsetting columns
-sub_columns <- DT[, .(V2,V3,V4)]
+sub_columns <- DT[, .(V2, V3, V4)]
 head(sub_columns)
 ```
 
-### How to subset rows (note no need for following comma)
+### Subset rows (note no need for following comma)
 ```{r}
 #subsetting rows
 sub_rows <- DT[V4 == "England" & V3 == "Beswick"]
 head(sub_rows)
 ```
 
-### How to order variables in ascending or descending order (note use of "-" to connote descending order)
+### Order variables in ascending or descending order (note use of "-" to connote descending order)
 ```{r}
 #ordering columns
 dt_order <- DT[order(V4, -V8)]
 head(dt_order)
 ```
 
-### How to add a column
+### Add a column
 ```{r}
 #add a new column - here we are adding columns V10 and V11 to create new column V_New
 DT[, V_New := V10 + V11]
+head(DT)
 ```
 
-### How to update a columns value based on it's current value
+### Update a columns value based on it's current value
+```{r}
+head(DT[V8 == "Aberdeen City"])
+```
+
 ```{r}
 #update row values - here we change the value to "Abr City" where it equals "Aberdeen City"
 DT[V8 == "Aberdeen City", V8 := "Abr City"]
+head(DT[V8 == "Abr City"])
 ```
 
-### How to update a columns value based on another column's value
+### Update a columns value based on another column's value
 ```{r}
 #update row values - here we change the value of column V8 to "Aberdeen City" where column V6 equals "Aberdeen City"
 DT[V6 == "Aberdeen City", V8 := "Aberdeen City"]
 ```
 
-### How to delete a column
+### Delete a column
 ```{r}
+head(DT)
 #delete a column - here we delete 2 columns
-DT [,c("V6","V7") := NULL ]
+DT [, c("V6","V7") := NULL ]
+head(DT)
 ```
 
-### You can Chain Commands Together!
+### Chain Commands Together!
 ```{r}
 DT[V8 == "Aberdeen City", V8 := "Abr City"][, V_New := V10 + V11][,c("V6","V7") := NULL]
 ```
@@ -109,3 +122,25 @@ DT[, .(average = mean(V10, na.rm = TRUE)), by = V4]
 #compute the count
 DT[, .N, by = V4]
 ```
+
+### Reshaping
+
+http://seananderson.ca/2013/10/19/reshape.html
+
+https://www.r-bloggers.com/how-to-reshape-data-in-r-tidyr-vs-reshape2/
+
+#### Melt
+```{r}
+aqdt <- as.data.table(airquality)
+  
+aqdt_melt <- data.table::melt(data = aqdt, id.vars = c('Month', 'Day'), measure.vars = c('Ozone', 'Solar.R', 'Wind'),
+                 variable.name = 'measurement', value.name = 'reading')
+```
+
+#### Cast
+
+```{r}
+data.table::dcast(aqdt_melt, Month + Day ~ measurement)
+```
+
+### Applying functions
