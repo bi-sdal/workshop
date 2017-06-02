@@ -99,7 +99,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Fri 6/2</th><th align="left" colspan="2"></th></tr>
 
-<tr><td></td><td>data.table</td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href='./training/100-datatable'>data.table></a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Working directories</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Running R scripts</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Background and detach processes</td><td>Daniel Chen</td></tr>
