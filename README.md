@@ -93,7 +93,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
-<tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
+<tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td><a href='./training/090-plotting'>Plotting</a></td><td>Daniel Chen</td></tr>
 
 
