@@ -11,7 +11,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td><a href="./training//00-setup">System Setup</a>: 
+<tr><td></td><td><a href="./training//000-setup">System Setup</a>: 
 <ul>
 <li>Git Bash</li>
 <li>Server Access</li>
@@ -19,7 +19,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <li>Database Connection</li>
 </ul>
 </td><td>Aaron Schroeder / Daniel Chen</td></tr>
-<tr><td></td><td><a href="./training/10-shell">Unix Tools</a>:
+<tr><td></td><td><a href="./training/010-shell">Unix Tools</a>:
 <ul>
 <li>Navigating Directories & Working with Files (cd, ls, mkdir, touch, nano)</li>
 <li>Shell Scripts (running shell scripts and understanding the working directory)</li>
@@ -28,7 +28,7 @@ at the [Social and Decision Analytics Laboratory][1].
 </td><td>Daniel Chen</td></tr>
 
 <tr><th>Tue 5/23</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td><a href="./training/40-git">Git</a>
+<tr><td></td><td><a href="./training/040-git">Git</a>
 <ul>
 <li>Setting up Git</li>
 <li>Creating a repository</li>
@@ -44,7 +44,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Wed 5/24</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Servers and code repositories</td><td>Daniel Chen</td></tr>
-<tr><td></td><td><a href="./training/30-project_template">Project Setup & Templates</a></td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href="./training/030-project_template">Project Setup & Templates</a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Ingestion & Storage
 <ul>
 <li>Files (csv, Excel, RData, zip)</li>
@@ -57,17 +57,17 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Thu 5/25</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Code repositories, project templates, and where to put and access your data</td><td>Daniel Chen</td></tr>
-<tr><td></td><td>Data Objects in R: <a href='./training/60-data_objects'>Data.Frames</a></td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Data Objects in R: <a href='./training/060-data_objects'>Data.Frames</a></td><td>Daniel Chen</td></tr>
 <tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 
 <tr><th>Fri 5/26</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>
 <ul>
 <li>Knitr/RMarkdown Basics</li>
-<li><a href='./training/60-data_objects#conditonal-subsetting'>Conditional Subsetting Dataframes</a></li>
-<li><a href='./training/60-data_objects#na-missing-values'>Missing Values</a></li>
+<li><a href='./training/060-data_objects#conditonal-subsetting'>Conditional Subsetting Dataframes</a></li>
+<li><a href='./training/060-data_objects#na-missing-values'>Missing Values</a></li>
 <ul></td><td>Daniel Chen</td></tr>
-<tr><td></td><td>Training: <a href='./training/80-sql'>SQL</a>, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>?
+<tr><td></td><td>Training: <a href='./training/080-sql'>SQL</a>, SQL, SQL!!! - What is SQL and <a href="http://blog.sqlizer.io/posts/sql-43/">why</a>?
 <ul>
 <li>R and SQL</li>
 <li>Selecting data</li>
@@ -91,16 +91,18 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Thu 6/1</th><th align="left" colspan="2"></th></tr>
 
-<tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>The Data Science Process & Data Discovery</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Structure Profiling: Missing Variables, Combined Variables, Multiple Observation Directions, Combined Observational Unit Types, Divided Observation Unit Type</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Data Quality Profiling: Completeness, Value Validity, Consistency, Uniqueness, Duplication</td><td>Adrienne Rogers</td></tr>
+<tr><td></td><td><a href='./training/090-plotting'>Plotting</a></td><td>Daniel Chen</td></tr>
+
 
 <tr><th>Fri 6/2</th><th align="left" colspan="2"></th></tr>
 
 <tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
 
 <tr><th>Mon 6/5</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Training: Data Presentation & Reporting (Shiny, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Mapping Food Deserts: A Shiny Dashboard</td><td>Aaron Schroeder</td></tr>
 
