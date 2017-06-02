@@ -1,0 +1,144 @@
+---
+title: "README"
+author: "Daniel Chen"
+date: ""
+output:
+  md_document:
+    variant: markdown_github 
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Reference Links
+
+http://www.cookbook-r.com/Graphs/
+
+http://ggplot2.tidyverse.org/reference/
+
+```{r}
+library(ggplot2)
+
+diamonds
+```
+
+# Base Graphics
+
+## 1 variable continuous
+```{r}
+hist(diamonds$price)
+```
+
+# ggplot2
+
+```{r}
+ggplot()
+```
+
+
+## 1 variable continuous
+
+```{r}
+ggplot(data = diamonds, mapping = aes(x = price)) + geom_histogram()
+```
+
+```{r}
+ggplot(data = diamonds, mapping = aes(x = price)) + geom_density()
+```
+
+
+## 1 variable discrete
+
+```{r}
+ggplot(data = diamonds, mapping = aes(x = cut)) + geom_bar()
+```
+
+
+## 2 variables discrete/continuous
+
+```{r}
+ggplot(diamonds, aes(x = cut, y = price)) + geom_boxplot()
+
+ggplot(diamonds, aes(x = cut, y = price)) + geom_violin()
+```
+
+## 2 variables continuous/continuous
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
+```
+
+## Layering in ggplot
+
+```{r}
+ggplot(diamonds) +
+  geom_point(aes(x = carat, y = price)) +
+  geom_hline(yintercept = 10000)
+```
+
+## Colors
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) + geom_point(color = "blue")
+```
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, color = color)) + geom_point()
+```
+
+## Facet wrap
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, color = color)) +
+  geom_point() +
+  facet_wrap(~cut)
+```
+
+## Facet grid
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, color = color)) +
+  geom_point() +
+  facet_grid(clarity~cut)
+```
+
+## Saving ggplots as a variable
+
+```{r}
+g <- ggplot(diamonds, aes(x = carat, y = price, color = color)) +
+  geom_point()
+g
+
+g + facet_grid(clarity ~ cut)
+```
+
+## Alpha transparency
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, color = color)) + geom_point(alpha = .1)
+```
+
+## Hexbin
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, fill = color)) + geom_hex()
+```
+
+# Themes
+
+```{r}
+library(ggthemes)
+
+g + theme_bw()
+
+g + theme_minimal()
+
+g + theme_economist()
+g + theme_wsj()
+
+
+g + theme_excel()
+```
+
