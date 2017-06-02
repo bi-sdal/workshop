@@ -58,7 +58,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>Thu 5/25</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Code repositories, project templates, and where to put and access your data</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Data Objects in R: <a href='./training/060-data_objects'>Data.Frames</a></td><td>Daniel Chen</td></tr>
-<tr><td></td><td><a href='./training/65-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
+<tr><td></td><td><a href='./training/065-functions_apply'>Functions and apply</a> & Looping in R 'for' loops vs apply family</td><td>Daniel Chen</td></tr>
 
 <tr><th>Fri 5/26</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>
@@ -99,9 +99,13 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <tr><th>Fri 6/2</th><th align="left" colspan="2"></th></tr>
 
-<tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
+<tr><td></td><td>data.table</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Working directories</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Running R scripts</td><td>Daniel Chen</td></tr>
+<tr><td></td><td>Background and detach processes</td><td>Daniel Chen</td></tr>
 
 <tr><th>Mon 6/5</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Training: Data Presentation & Reporting (Shiny, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
 <tr><td></td><td>Mapping Food Deserts: A Shiny Dashboard</td><td>Aaron Schroeder</td></tr>
