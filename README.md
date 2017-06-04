@@ -11,7 +11,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td>[System Setup][100]: 
+<tr><td></td><td><a href='./training//000-setup'>System Setup</a>: 
 <ul>
 <li>Git Bash</li>
 <li>Server Access</li>
@@ -144,4 +144,3 @@ at the [Social and Decision Analytics Laboratory][1].
 [7]: http://neondataskills.org/tutorial-series/vector-data-series/
 [8]: http://neondataskills.org/tutorial-series/raster-data-series/
 [9]: https://github.com/datacarpentry/r-spatial-data-management-intro
-[100]: ./training//000-setup
