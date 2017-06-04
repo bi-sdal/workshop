@@ -11,7 +11,7 @@ at the [Social and Decision Analytics Laboratory][1].
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td>System Setup[100]: 
+<tr><td></td><td>[System Setup][100]: 
 <ul>
 <li>Git Bash</li>
 <li>Server Access</li>
