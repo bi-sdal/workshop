@@ -1,0 +1,121 @@
+---
+title: "Web Scraping"
+author: "Daniel Chen"
+date: ""
+output:
+  md_document:
+    variant: markdown_github 
+    toc: true
+---
+
+# Ways of getting information from the web
+
+- Download data manually
+- Use an API (Application Programming Interface)
+- Scrape it
+    - Check the Terms and Conditoins (TOC)
+
+# Getting Tables from websites
+
+Useful for getting tables from wikipedia
+
+Getting US States Abbreviations
+
+https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations
+
+```{r}
+library(RCurl)
+library(XML)
+library(testthat)
+library(stringr)
+# url is a name of a function
+wiki_url <- RCurl::getURL("https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations")
+```
+
+```{r}
+tables <- XML::readHTMLTable(wiki_url)
+class(tables)
+length(tables)
+```
+
+```{r}
+abbrevs <- tables[[1]]
+head(abbrevs)
+```
+
+```{r}
+us <- abbrevs[11:nrow(abbrevs), ]
+head(us)
+
+first_value <- stringr::str_trim((as.character(us[1, 1])))
+testthat::expect_equal(object = first_value, expected = 'United States of America')
+```
+
+```{r, error=TRUE}
+# testthat::expect_equal(object = stringr::str_trim((as.character(us[1, 1]))), expected = 'does not match')
+```
+
+# Scraping Websites
+
+https://stat4701.github.io/edav/2015/04/02/rvest_tutorial/
+
+```{r}
+library(rvest)
+
+if (interactive()) {
+  data_location <- 'data/working'
+} else {
+  data_location <- '../../data/working'
+}
+```
+
+# Scraping
+
+IMDB Top Rated Movies:
+
+http://www.imdb.com/chart/top?ref_=nv_mv_250_6
+
+http://selectorgadget.com/
+
+CSS class and id
+
+```{r}
+lego_movie <- read_html("http://www.imdb.com/title/tt1490017/")
+```
+
+```{r}
+# Rating
+lego_movie %>% 
+  html_node("strong span") %>%
+  html_text() %>%
+  as.numeric()
+```
+
+```{r}
+# First page of actors
+lego_movie %>%
+  html_nodes(".itemprop .itemprop") %>%
+  html_text()
+```
+
+```{r}
+lego_movie %>%
+  html_nodes("table") %>%
+  .[[1]] %>%
+  html_table()
+```
+
+```{r}
+lego_movie %>%
+  html_nodes(".primary_photo , .ellipsis, .character, #titleCast .itemprop, #titleCast .loadlate")
+```
+
+```{r}
+# more manual way
+lego_movie %>%
+  html_nodes("table") %>%
+  .[[1]] %>%
+  html_nodes("tr") %>%
+  html_nodes("span") %>%
+  html_text()
+```
