@@ -105,6 +105,7 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Background and detach processes</td><td>Daniel Chen</td></tr>
 
 <tr><th>Mon 6/5</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Training: <a href='./training/110-web_scraping'>Web Scraping</a>
 <tr><td></td><td>Training: Data Presentation & Reporting (<a href='./training/shiny'>Shiny</a>, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
 
 <tr><th>Tue 6/6</th><th align="left" colspan="2"></th></tr>
