@@ -23,7 +23,7 @@ diamonds <- ggplot2::diamonds
 economics <- ggplot2::economics
 ```
 
-# Introducetion
+# Introduction
 
 Understanding your dataset is more important than fitting a model and calling it a day.
 
@@ -89,7 +89,7 @@ p4 <- ggplot(anscombe) +
 sdalr::multiplot(p1, p2, p3, p4, cols = 2)
 ```
 
-##
+## anscombosaurus
 
 ```{r}
 data("anscombosaurus", package = 'sdalr')

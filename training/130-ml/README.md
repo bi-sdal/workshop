@@ -1,5 +1,5 @@
--   [Introducetion](#introducetion)
-    -   [](#section)
+-   [Introduction](#introduction)
+    -   [anscombosaurus](#anscombosaurus)
 -   [Summary Statistics](#summary-statistics)
     -   [Correlation](#correlation)
     -   [Covariance](#covariance)
@@ -19,8 +19,8 @@ diamonds <- ggplot2::diamonds
 economics <- ggplot2::economics
 ```
 
-Introducetion
-=============
+Introduction
+============
 
 Understanding your dataset is more important than fitting a model and calling it a day.
 
@@ -114,6 +114,9 @@ sdalr::multiplot(p1, p2, p3, p4, cols = 2)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-6-1.png)
+
+anscombosaurus
+--------------
 
 ``` r
 data("anscombosaurus", package = 'sdalr')
@@ -221,7 +224,7 @@ GGally::wrap(
     ##     allParams[names(argsList)] <- argsList
     ##     do.call(original_fn, allParams)
     ## }
-    ## <environment: 0x4abc970>
+    ## <environment: 0x3cc22c0>
     ## attr(,"class")
     ## [1] "ggmatrix_fn_with_params"
     ## attr(,"name")
