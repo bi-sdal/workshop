@@ -1,0 +1,49 @@
+---
+title: "Untitled"
+author: "Daniel Chen"
+date: "June 5, 2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(shiny)
+```
+
+```{r}
+inputPanel(
+    sliderInput("hist_bin", "Number of Bins",
+                min = 5, max = 50,
+                step = 1, value = 20)
+)
+```
+
+```{r}
+renderPlot({
+    ggplot(data = diamonds, aes (x = price)) +
+        geom_histogram(bins = input$hist_bin)
+})
+```
+
+
+```{r}
+inputPanel(
+    radioButtons('facet1', label = 'Facet 1',
+                 choices = list('cut' = 'cut', 'color' = 'color', 'clarity' = 'clarity')),
+    radioButtons('facet2', label = 'Facet 2',
+                 choices = list('cut' = 'cut', 'color' = 'color', 'clarity' = 'clarity'))
+)
+
+```
+
+```{r}
+renderPlot(
+    ggplot(data = diamonds, aes(x = carat, y = price)) +
+    geom_point() +
+    facet_grid(as.formula(paste(input$facet1, '~', input$facet2)))
+)
+
+```
