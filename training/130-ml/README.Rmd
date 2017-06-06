@@ -1,0 +1,82 @@
+---
+title: "Machine Learning"
+author: "Daniel Chen"
+date: ""
+output: #html_document
+  md_document:
+    variant: markdown_github
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+> The fact that data science exists as a field is a colossal failure of statistics. To me, that is what statistics is all about. It is gaining insight from data using modelling and visualization. Data munging and manipulation is hard and statistics has just said that’s not our domain.”
+
+- Hadley Wickham, PhD
+
+https://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/
+
+```{r}
+diamonds <- ggplot2::diamonds
+economics <- ggplot2::economics
+```
+
+# Basic Statistics
+
+## Summary Statistics
+
+```{r}
+summary(diamonds$price)
+```
+
+```{r}
+summary(diamonds)
+```
+
+```{r}
+mean(diamonds$price)
+sd(diamonds$price)
+quantile(diamonds$price, probs = 0.25)
+```
+
+## Correlation
+
+$$
+r_{xy} = \dfrac{\sum_{i = 1}^n (x_i - \bar{x}) (y_i - \bar{y})}{(n - 1) s_x s_y}
+$$
+
+```{r}
+cor(economics$pce, economics$psavert)
+```
+
+```{r}
+GGally::ggpairs(data = dplyr::select(economics, -date, -pop))
+```
+
+```{r}
+GGally::wrap(
+  GGally::ggpairs(data = dplyr::select(economics, -date, -pop)),
+  labelSize = 8
+)
+```
+
+## Covariance
+
+$$
+cov(X, Y) = \dfrac{1}{N - 1} \sum_{i = 1}^N (x_i - \bar{x})(y_i - \bar{y})
+$$
+
+```{r}
+cov(economics$pce, economics$psavert)
+```
+
+```{r}
+identical(
+  cov(economics$pce, economics$psavert),
+  cor(economics$pce, economics$psavert) *
+    sd(economics$pce) *
+    sd(economics$psavert)
+)
+```
