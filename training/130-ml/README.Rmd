@@ -511,3 +511,61 @@ mtcars_tree_bin
 rpart.plot(mtcars_tree_bin)
 ```
 
+# Random Forest
+
+Ensemble method
+
+```{r}
+library(randomForest)
+library(useful)
+
+rf_formula <- as.factor(mpg_bin) ~ cyl + disp + hp + drat + wt + qsec +
+  as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb)
+
+rf_x <- build.x(rf_formula, data = mtcars)
+rf_y <- build.y(rf_formula, data = mtcars)
+
+mtcars_rf <- randomForest(x = rf_x, y = rf_y)
+mtcars_rf
+```
+
+# Clustering
+
+## Kmeans (Unsupervised Learning)
+
+https://stats.stackexchange.com/questions/56500/what-are-the-main-differences-between-k-means-and-k-nearest-neighbours
+
+K-means is a clustering algorithm that tries to partition a set of points into K sets (clusters) such that the points in each cluster tend to be near each other. It is unsupervised because the points have no external classification.
+
+K-nearest neighbors is a classification (or regression) algorithm that in order to determine the classification of a point, combines the classification of the K nearest points. It is supervised because you are trying to classify a point based on the known classification of other points.
+
+```{r}
+head(iris)
+iris_subset <- iris[, !names(iris) %in% c('Species')]
+head(iris_subset)
+```
+
+```{r}
+set.seed(42)
+
+iris_k3 <- kmeans(x = iris_subset, centers = 3)
+iris_k3
+```
+
+```{r}
+plot.kmeans(iris_k3, data = iris_subset)
+```
+
+```{r}
+plot.kmeans(iris_k3, data = iris, class = 'Species')
+```
+
+```{r}
+best_iris <- useful::FitKMeans(iris_subset, max.clusters = 25, nstart = 10, seed = 42)
+best_iris
+```
+
+```{r}
+PlotHartigan(best_iris)
+```
+

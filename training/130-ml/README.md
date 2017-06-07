@@ -15,6 +15,9 @@
     -   [Ridge](#ridge)
     -   [Parallelization and optimizing alpha](#parallelization-and-optimizing-alpha)
 -   [Decision Trees](#decision-trees)
+-   [Random Forest](#random-forest)
+-   [Clustering](#clustering)
+    -   [Kmeans (Unsupervised Learning)](#kmeans-unsupervised-learning)
 
 > The fact that data science exists as a field is a colossal failure of statistics. To me, that is what statistics is all about. It is gaining insight from data using modelling and visualization. Data munging and manipulation is hard and statistics has just said that’s not our domain.”
 
@@ -232,7 +235,7 @@ GGally::wrap(
     ##     allParams[names(argsList)] <- argsList
     ##     do.call(original_fn, allParams)
     ## }
-    ## <environment: 0x671a278>
+    ## <environment: 0x74125a8>
     ## attr(,"class")
     ## [1] "ggmatrix_fn_with_params"
     ## attr(,"name")
@@ -778,7 +781,7 @@ cv1 <- cv.glm(data = diamonds, glmfit = m1, K = 5)
 cv1$delta
 ```
 
-    ## [1] 2398335 2398293
+    ## [1] 2398457 2398401
 
 ``` r
 cv2 <- cv.glm(data = diamonds, glmfit = m2, K = 5)
@@ -794,10 +797,10 @@ cv_results
 ```
 
     ##     error adjusted_error   model
-    ## 1 2398335        2398293 model_1
-    ## 2 2284836        2284771 model_2
-    ## 3 2280489        2280399 model_3
-    ## 4 2275920        2275794 model_4
+    ## 1 2398457        2398401 model_1
+    ## 2 2285273        2285160 model_2
+    ## 3 2280511        2280418 model_3
+    ## 4 2276299        2276130 model_4
 
 Bootstrap
 =========
@@ -1189,3 +1192,171 @@ rpart.plot(mtcars_tree_bin)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-58-1.png)
+
+Random Forest
+=============
+
+Ensemble method
+
+``` r
+library(randomForest)
+```
+
+    ## randomForest 4.6-12
+
+    ## Type rfNews() to see new features/changes/bug fixes.
+
+    ## 
+    ## Attaching package: 'randomForest'
+
+    ## The following object is masked from 'package:gridExtra':
+    ## 
+    ##     combine
+
+    ## The following object is masked from 'package:ggplot2':
+    ## 
+    ##     margin
+
+``` r
+library(useful)
+
+rf_formula <- as.factor(mpg_bin) ~ cyl + disp + hp + drat + wt + qsec +
+  as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb)
+
+rf_x <- build.x(rf_formula, data = mtcars)
+rf_y <- build.y(rf_formula, data = mtcars)
+
+mtcars_rf <- randomForest(x = rf_x, y = rf_y)
+mtcars_rf
+```
+
+    ## 
+    ## Call:
+    ##  randomForest(x = rf_x, y = rf_y) 
+    ##                Type of random forest: classification
+    ##                      Number of trees: 500
+    ## No. of variables tried at each split: 4
+    ## 
+    ##         OOB estimate of  error rate: 12.5%
+    ## Confusion matrix:
+    ##      good poor class.error
+    ## good    7    2  0.22222222
+    ## poor    2   21  0.08695652
+
+Clustering
+==========
+
+Kmeans (Unsupervised Learning)
+------------------------------
+
+<https://stats.stackexchange.com/questions/56500/what-are-the-main-differences-between-k-means-and-k-nearest-neighbours>
+
+K-means is a clustering algorithm that tries to partition a set of points into K sets (clusters) such that the points in each cluster tend to be near each other. It is unsupervised because the points have no external classification.
+
+K-nearest neighbors is a classification (or regression) algorithm that in order to determine the classification of a point, combines the classification of the K nearest points. It is supervised because you are trying to classify a point based on the known classification of other points.
+
+``` r
+head(iris)
+```
+
+    ##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+    ## 1          5.1         3.5          1.4         0.2  setosa
+    ## 2          4.9         3.0          1.4         0.2  setosa
+    ## 3          4.7         3.2          1.3         0.2  setosa
+    ## 4          4.6         3.1          1.5         0.2  setosa
+    ## 5          5.0         3.6          1.4         0.2  setosa
+    ## 6          5.4         3.9          1.7         0.4  setosa
+
+``` r
+iris_subset <- iris[, !names(iris) %in% c('Species')]
+head(iris_subset)
+```
+
+    ##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+    ## 1          5.1         3.5          1.4         0.2
+    ## 2          4.9         3.0          1.4         0.2
+    ## 3          4.7         3.2          1.3         0.2
+    ## 4          4.6         3.1          1.5         0.2
+    ## 5          5.0         3.6          1.4         0.2
+    ## 6          5.4         3.9          1.7         0.4
+
+``` r
+set.seed(42)
+
+iris_k3 <- kmeans(x = iris_subset, centers = 3)
+iris_k3
+```
+
+    ## K-means clustering with 3 clusters of sizes 62, 38, 50
+    ## 
+    ## Cluster means:
+    ##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+    ## 1     5.901613    2.748387     4.393548    1.433871
+    ## 2     6.850000    3.073684     5.742105    2.071053
+    ## 3     5.006000    3.428000     1.462000    0.246000
+    ## 
+    ## Clustering vector:
+    ##   [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+    ##  [36] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+    ##  [71] 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 2 2 2
+    ## [106] 2 1 2 2 2 2 2 2 1 1 2 2 2 2 1 2 1 2 1 2 2 1 1 2 2 2 2 2 1 2 2 2 2 1 2
+    ## [141] 2 2 1 2 2 2 1 2 2 1
+    ## 
+    ## Within cluster sum of squares by cluster:
+    ## [1] 39.82097 23.87947 15.15100
+    ##  (between_SS / total_SS =  88.4 %)
+    ## 
+    ## Available components:
+    ## 
+    ## [1] "cluster"      "centers"      "totss"        "withinss"    
+    ## [5] "tot.withinss" "betweenss"    "size"         "iter"        
+    ## [9] "ifault"
+
+``` r
+plot.kmeans(iris_k3, data = iris_subset)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-62-1.png)
+
+``` r
+plot.kmeans(iris_k3, data = iris, class = 'Species')
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-63-1.png)
+
+``` r
+best_iris <- useful::FitKMeans(iris_subset, max.clusters = 25, nstart = 10, seed = 42)
+best_iris
+```
+
+    ##    Clusters    Hartigan AddCluster
+    ## 1         2 513.9245460       TRUE
+    ## 2         3 137.0169882       TRUE
+    ## 3         4  55.1640325       TRUE
+    ## 4         5  33.6035121       TRUE
+    ## 5         6  16.4244382       TRUE
+    ## 6         7  30.8787324       TRUE
+    ## 7         8  19.3523921       TRUE
+    ## 8         9  12.1709045       TRUE
+    ## 9        10   7.7078521      FALSE
+    ## 10       11  12.7911531       TRUE
+    ## 11       12   6.5613646      FALSE
+    ## 12       13  10.9950009       TRUE
+    ## 13       14   7.6877779      FALSE
+    ## 14       15   7.3396393      FALSE
+    ## 15       16   8.1984143      FALSE
+    ## 16       17   8.7307066      FALSE
+    ## 17       18   4.8929347      FALSE
+    ## 18       19   8.3295561      FALSE
+    ## 19       20   5.1007070      FALSE
+    ## 20       21   1.9999908      FALSE
+    ## 21       22   9.5622033      FALSE
+    ## 22       23  -0.5226278      FALSE
+    ## 23       24  11.0003607       TRUE
+    ## 24       25   4.0102847      FALSE
+
+``` r
+PlotHartigan(best_iris)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-65-1.png)
