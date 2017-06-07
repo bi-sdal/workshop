@@ -255,17 +255,31 @@ results
 
 ## Survival Analysis
 
+https://rpubs.com/daspringate/survival
+
 ```{r}
 library(survival)
-head(bladder)
+head(heart)
+```
+
+Survival of patients on the waiting list for the Stanford heart transplant program.
+
+```
+start, stop, event:	 Entry and exit time and status for this interval of time
+age:	 age-48 years
+year:	 year of acceptance (in years after 1 Nov 1967)
+surgery:	 prior bypass surgery 1=yes
+transplant:	 received transplant 1=yes
+id:	 patient id
 ```
 
 ```{r}
-s <- Surv(bladder$stop, bladder$event)
+s <- Surv(heart$start, heart$stop, heart$event)
 ```
 
 ```{r}
-cox <- coxph(Surv(stop, event) ~ rx + number + size + enum, data = bladder)
+cox <- coxph(Surv(heart$start, heart$stop, heart$event) ~ age + year + as.factor(surgery) + as.factor(transplant),
+             data = heart)
 summary(cox)
 ```
 
@@ -274,9 +288,131 @@ plot(survfit(cox), xlab = 'days', ylab = 'Survival Rate', conf.int = TRUE)
 ```
 
 ```{r}
-cox <- coxph(Surv(stop, event) ~ strata(rx) + number + size + enum, data = bladder)
+cox <- coxph(Surv(heart$start, heart$stop, heart$event) ~ age + year + strata(as.factor(surgery)) + as.factor(transplant),
+             data = heart)
 summary(cox)
 plot(survfit(cox), xlab = 'days', ylab = 'Survival Rate', conf.int = TRUE, col = 1:2)
 legend("bottomleft", legend = c(1, 2), lty = 1, col = 1:2, text.col = 1:2, title = 'rx')
+```
+
+# Model Diagnostics
+
+```{r}
+m1 <- glm(price ~ carat, data = diamonds)
+m2 <- glm(price ~ carat + as.factor(cut), data = diamonds)
+m3 <- glm(price ~ carat + as.factor(cut) + depth, data = diamonds)
+m4 <- glm(price ~ carat + as.factor(cut) + depth +  table, data = diamonds)
+```
+
+```{r}
+head(fortify(m1))
+```
+
+```{r}
+plot(m1)
+```
+
+```{r}
+anova(m1, m2, m3, m4)
+```
+
+```{r}
+AIC(m1, m2, m3, m4)
+```
+
+```{r}
+BIC(m1, m2, m3, m4)
+```
+
+## Cross Validation
+
+```{r}
+library(boot)
+
+cv1 <- cv.glm(data = diamonds, glmfit = m1, K = 5)
+
+# raw cross-validation error based on MSE
+# adjusted cross-validation error
+cv1$delta
+```
+
+```{r}
+cv2 <- cv.glm(data = diamonds, glmfit = m2, K = 5)
+cv3 <- cv.glm(data = diamonds, glmfit = m3, K = 5)
+cv4 <- cv.glm(data = diamonds, glmfit = m4, K = 5)
+```
+
+```{r}
+cv_results <- as.data.frame(rbind(cv1$delta, cv2$delta, cv3$delta, cv4$delta))
+names(cv_results) <- c('error', 'adjusted_error')
+cv_results$model <- sprintf('model_%s', 1:4)
+cv_results
+```
+
+# Bootstrap
+
+# Regularization
+
+## LASSO
+
+```{r}
+head(mtcars)
+```
+
+```{r}
+library(useful)
+mtcars_x <- build.x(mpg_bin_int ~ mpg + cyl + disp + hp + drat + wt + qsec +
+                      as.factor(vs) + as.factor(am) + as.factor(gear) + as.factor(carb),
+                    data = mtcars, contrasts = FALSE)
+mtcars_y <- build.y(mpg_bin_int ~ mpg + cyl + disp + hp + drat + wt + qsec +
+                      as.factor(vs) + as.factor(am) + as.factor(gear) + as.factor(carb),
+                    data = mtcars)
+```
+
+```{r}
+library(glmnet)
+set.seed(42)
+```
+
+```{r}
+cars_lasso <- cv.glmnet(x = mtcars_x, y = mtcars_y, family = "binomial", nfolds = 5)
+plot(cars_lasso)
+```
+
+
+```{r}
+cars_lasso$lambda.min
+cars_lasso$lambda.1se
+```
+
+
+```{r}
+coef(cars_lasso, s = "lambda.1se")
+```
+
+```{r}
+plot(cars_lasso$glmnet.fit, xvar = "lambda")
+```
+
+
+## Ridge
+
+```{r}
+set.seed(42)
+cars_ridge <- cv.glmnet(x = mtcars_x, y = mtcars_y, family = "binomial", nfolds = 5, alpha = 0)
+```
+
+```{r}
+plot(cars_ridge)
+cars_ridge$lambda.min
+cars_ridge$lambda.1se
+coef(cars_ridge, s = "lambda.1se")
+plot(cars_ridge$glmnet.fit, xvar = "lambda")
+```
+
+## Parallelization and optimizing alpha
+
+```{r}
+
 ```
 

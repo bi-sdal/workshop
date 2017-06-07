@@ -7,6 +7,13 @@
 -   [Generalized Linear Models](#generalized-linear-models)
     -   [Logistic](#logistic)
     -   [Survival Analysis](#survival-analysis)
+-   [Model Diagnostics](#model-diagnostics)
+    -   [Cross Validation](#cross-validation)
+-   [Bootstrap](#bootstrap)
+-   [Regularization](#regularization)
+    -   [LASSO](#lasso)
+    -   [Ridge](#ridge)
+    -   [Parallelization and optimizing alpha](#parallelization-and-optimizing-alpha)
 
 > The fact that data science exists as a field is a colossal failure of statistics. To me, that is what statistics is all about. It is gaining insight from data using modelling and visualization. Data munging and manipulation is hard and statistics has just said that’s not our domain.”
 
@@ -224,7 +231,7 @@ GGally::wrap(
     ##     allParams[names(argsList)] <- argsList
     ##     do.call(original_fn, allParams)
     ## }
-    ## <environment: 0x3cc22c0>
+    ## <environment: 0x5148d60>
     ## attr(,"class")
     ## [1] "ggmatrix_fn_with_params"
     ## attr(,"name")
@@ -572,53 +579,66 @@ results
 Survival Analysis
 -----------------
 
+<https://rpubs.com/daspringate/survival>
+
 ``` r
 library(survival)
-head(bladder)
+head(heart)
 ```
 
-    ##   id rx number size stop event enum
-    ## 1  1  1      1    3    1     0    1
-    ## 2  1  1      1    3    1     0    2
-    ## 3  1  1      1    3    1     0    3
-    ## 4  1  1      1    3    1     0    4
-    ## 5  2  1      2    1    4     0    1
-    ## 6  2  1      2    1    4     0    2
+    ##   start stop event        age      year surgery transplant id
+    ## 1     0   50     1 -17.155373 0.1232033       0          0  1
+    ## 2     0    6     1   3.835729 0.2546201       0          0  2
+    ## 3     0    1     0   6.297057 0.2655715       0          0  3
+    ## 4     1   16     1   6.297057 0.2655715       0          1  3
+    ## 5     0   36     0  -7.737166 0.4900753       0          0  4
+    ## 6    36   39     1  -7.737166 0.4900753       0          1  4
+
+Survival of patients on the waiting list for the Stanford heart transplant program.
+
+    start, stop, event:  Entry and exit time and status for this interval of time
+    age:     age-48 years
+    year:    year of acceptance (in years after 1 Nov 1967)
+    surgery:     prior bypass surgery 1=yes
+    transplant:  received transplant 1=yes
+    id:  patient id
 
 ``` r
-s <- Surv(bladder$stop, bladder$event)
+s <- Surv(heart$start, heart$stop, heart$event)
 ```
 
 ``` r
-cox <- coxph(Surv(stop, event) ~ rx + number + size + enum, data = bladder)
+cox <- coxph(Surv(heart$start, heart$stop, heart$event) ~ age + year + as.factor(surgery) + as.factor(transplant),
+             data = heart)
 summary(cox)
 ```
 
     ## Call:
-    ## coxph(formula = Surv(stop, event) ~ rx + number + size + enum, 
-    ##     data = bladder)
+    ## coxph(formula = Surv(heart$start, heart$stop, heart$event) ~ 
+    ##     age + year + as.factor(surgery) + as.factor(transplant), 
+    ##     data = heart)
     ## 
-    ##   n= 340, number of events= 112 
+    ##   n= 172, number of events= 75 
     ## 
-    ##            coef exp(coef) se(coef)      z Pr(>|z|)    
-    ## rx     -0.59739   0.55024  0.20088 -2.974  0.00294 ** 
-    ## number  0.21754   1.24301  0.04653  4.675 2.93e-06 ***
-    ## size   -0.05677   0.94481  0.07091 -0.801  0.42333    
-    ## enum   -0.60385   0.54670  0.09401 -6.423 1.34e-10 ***
+    ##                            coef exp(coef) se(coef)      z Pr(>|z|)  
+    ## age                     0.02717   1.02754  0.01371  1.981   0.0476 *
+    ## year                   -0.14635   0.86386  0.07047 -2.077   0.0378 *
+    ## as.factor(surgery)1    -0.63721   0.52877  0.36723 -1.735   0.0827 .
+    ## as.factor(transplant)1 -0.01025   0.98980  0.31375 -0.033   0.9739  
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
-    ##        exp(coef) exp(-coef) lower .95 upper .95
-    ## rx        0.5502     1.8174    0.3712    0.8157
-    ## number    1.2430     0.8045    1.1347    1.3617
-    ## size      0.9448     1.0584    0.8222    1.0857
-    ## enum      0.5467     1.8291    0.4547    0.6573
+    ##                        exp(coef) exp(-coef) lower .95 upper .95
+    ## age                       1.0275     0.9732    1.0003    1.0555
+    ## year                      0.8639     1.1576    0.7524    0.9918
+    ## as.factor(surgery)1       0.5288     1.8912    0.2574    1.0860
+    ## as.factor(transplant)1    0.9898     1.0103    0.5352    1.8307
     ## 
-    ## Concordance= 0.753  (se = 0.029 )
-    ## Rsquare= 0.179   (max possible= 0.971 )
-    ## Likelihood ratio test= 67.21  on 4 df,   p=8.804e-14
-    ## Wald test            = 64.73  on 4 df,   p=2.932e-13
-    ## Score (logrank) test = 69.42  on 4 df,   p=2.998e-14
+    ## Concordance= 0.636  (se = 0.037 )
+    ## Rsquare= 0.084   (max possible= 0.969 )
+    ## Likelihood ratio test= 15.11  on 4 df,   p=0.004476
+    ## Wald test            = 14.49  on 4 df,   p=0.005877
+    ## Score (logrank) test = 15.03  on 4 df,   p=0.004631
 
 ``` r
 plot(survfit(cox), xlab = 'days', ylab = 'Survival Rate', conf.int = TRUE)
@@ -627,33 +647,35 @@ plot(survfit(cox), xlab = 'days', ylab = 'Survival Rate', conf.int = TRUE)
 ![](README_files/figure-markdown_github/unnamed-chunk-30-1.png)
 
 ``` r
-cox <- coxph(Surv(stop, event) ~ strata(rx) + number + size + enum, data = bladder)
+cox <- coxph(Surv(heart$start, heart$stop, heart$event) ~ age + year + strata(as.factor(surgery)) + as.factor(transplant),
+             data = heart)
 summary(cox)
 ```
 
     ## Call:
-    ## coxph(formula = Surv(stop, event) ~ strata(rx) + number + size + 
-    ##     enum, data = bladder)
+    ## coxph(formula = Surv(heart$start, heart$stop, heart$event) ~ 
+    ##     age + year + strata(as.factor(surgery)) + as.factor(transplant), 
+    ##     data = heart)
     ## 
-    ##   n= 340, number of events= 112 
+    ##   n= 172, number of events= 75 
     ## 
-    ##            coef exp(coef) se(coef)      z Pr(>|z|)    
-    ## number  0.21371   1.23826  0.04648  4.598 4.27e-06 ***
-    ## size   -0.05485   0.94662  0.07097 -0.773     0.44    
-    ## enum   -0.60695   0.54501  0.09408 -6.451 1.11e-10 ***
+    ##                            coef exp(coef) se(coef)      z Pr(>|z|)  
+    ## age                     0.02681   1.02718  0.01367  1.962   0.0498 *
+    ## year                   -0.14924   0.86136  0.07010 -2.129   0.0333 *
+    ## as.factor(transplant)1 -0.02178   0.97846  0.31588 -0.069   0.9450  
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
-    ##        exp(coef) exp(-coef) lower .95 upper .95
-    ## number    1.2383     0.8076    1.1304    1.3564
-    ## size      0.9466     1.0564    0.8237    1.0879
-    ## enum      0.5450     1.8348    0.4532    0.6554
+    ##                        exp(coef) exp(-coef) lower .95 upper .95
+    ## age                       1.0272     0.9735    1.0000    1.0551
+    ## year                      0.8614     1.1610    0.7508    0.9882
+    ## as.factor(transplant)1    0.9785     1.0220    0.5268    1.8173
     ## 
-    ## Concordance= 0.74  (se = 0.04 )
-    ## Rsquare= 0.166   (max possible= 0.954 )
-    ## Likelihood ratio test= 61.84  on 3 df,   p=2.379e-13
-    ## Wald test            = 60.04  on 3 df,   p=5.751e-13
-    ## Score (logrank) test = 65.05  on 3 df,   p=4.896e-14
+    ## Concordance= 0.606  (se = 0.042 )
+    ## Rsquare= 0.057   (max possible= 0.957 )
+    ## Likelihood ratio test= 10.17  on 3 df,   p=0.01721
+    ## Wald test            = 9.72  on 3 df,   p=0.02106
+    ## Score (logrank) test = 9.9  on 3 df,   p=0.01944
 
 ``` r
 plot(survfit(cox), xlab = 'days', ylab = 'Survival Rate', conf.int = TRUE, col = 1:2)
@@ -661,3 +683,314 @@ legend("bottomleft", legend = c(1, 2), lty = 1, col = 1:2, text.col = 1:2, title
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-31-1.png)
+
+Model Diagnostics
+=================
+
+``` r
+m1 <- glm(price ~ carat, data = diamonds)
+m2 <- glm(price ~ carat + as.factor(cut), data = diamonds)
+m3 <- glm(price ~ carat + as.factor(cut) + depth, data = diamonds)
+m4 <- glm(price ~ carat + as.factor(cut) + depth +  table, data = diamonds)
+```
+
+``` r
+head(fortify(m1))
+```
+
+    ##   price carat         .hat   .sigma      .cooksd     .fitted   .resid
+    ## 1   326  0.23 4.515399e-05 1548.572 6.001647e-06 -472.382688 798.3827
+    ## 2   326  0.21 4.706148e-05 1548.571 8.922178e-06 -627.511200 953.5112
+    ## 3   327  0.23 4.515399e-05 1548.572 6.016690e-06 -472.382688 799.3827
+    ## 4   334  0.29 3.982758e-05 1548.576 9.656791e-07   -6.997151 340.9972
+    ## 5   335  0.31 3.818413e-05 1548.576 2.780364e-07  148.131362 186.8686
+    ## 6   336  0.24 4.422500e-05 1548.573 4.925361e-06 -394.818432 730.8184
+    ##   .stdresid
+    ## 1 0.5155756
+    ## 2 0.6157543
+    ## 3 0.5162214
+    ## 4 0.2202069
+    ## 5 0.1206747
+    ## 6 0.4719441
+
+``` r
+plot(m1)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-34-1.png)![](README_files/figure-markdown_github/unnamed-chunk-34-2.png)![](README_files/figure-markdown_github/unnamed-chunk-34-3.png)![](README_files/figure-markdown_github/unnamed-chunk-34-4.png)
+
+``` r
+anova(m1, m2, m3, m4)
+```
+
+    ## Analysis of Deviance Table
+    ## 
+    ## Model 1: price ~ carat
+    ## Model 2: price ~ carat + as.factor(cut)
+    ## Model 3: price ~ carat + as.factor(cut) + depth
+    ## Model 4: price ~ carat + as.factor(cut) + depth + table
+    ##   Resid. Df Resid. Dev Df   Deviance
+    ## 1     53938 1.2935e+11              
+    ## 2     53934 1.2321e+11  4 6133201436
+    ## 3     53933 1.2297e+11  1  246635400
+    ## 4     53932 1.2270e+11  1  264127832
+
+``` r
+AIC(m1, m2, m3, m4)
+```
+
+    ##    df      AIC
+    ## m1  3 945466.5
+    ## m2  7 942854.2
+    ## m3  8 942748.1
+    ## m4  9 942634.2
+
+``` r
+BIC(m1, m2, m3, m4)
+```
+
+    ##    df      BIC
+    ## m1  3 945493.2
+    ## m2  7 942916.5
+    ## m3  8 942819.3
+    ## m4  9 942714.2
+
+Cross Validation
+----------------
+
+``` r
+library(boot)
+```
+
+    ## 
+    ## Attaching package: 'boot'
+
+    ## The following object is masked from 'package:survival':
+    ## 
+    ##     aml
+
+``` r
+cv1 <- cv.glm(data = diamonds, glmfit = m1, K = 5)
+
+# raw cross-validation error based on MSE
+# adjusted cross-validation error
+cv1$delta
+```
+
+    ## [1] 2398448 2398393
+
+``` r
+cv2 <- cv.glm(data = diamonds, glmfit = m2, K = 5)
+cv3 <- cv.glm(data = diamonds, glmfit = m3, K = 5)
+cv4 <- cv.glm(data = diamonds, glmfit = m4, K = 5)
+```
+
+``` r
+cv_results <- as.data.frame(rbind(cv1$delta, cv2$delta, cv3$delta, cv4$delta))
+names(cv_results) <- c('error', 'adjusted_error')
+cv_results$model <- sprintf('model_%s', 1:4)
+cv_results
+```
+
+    ##     error adjusted_error   model
+    ## 1 2398448        2398393 model_1
+    ## 2 2285151        2285051 model_2
+    ## 3 2280927        2280789 model_3
+    ## 4 2276294        2276126 model_4
+
+Bootstrap
+=========
+
+Regularization
+==============
+
+LASSO
+-----
+
+``` r
+head(mtcars)
+```
+
+    ##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+    ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+    ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+    ## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+    ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+    ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+    ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+    ##                   mpg_bin mpg_bin_int
+    ## Mazda RX4            poor           0
+    ## Mazda RX4 Wag        poor           0
+    ## Datsun 710           good           1
+    ## Hornet 4 Drive       poor           0
+    ## Hornet Sportabout    poor           0
+    ## Valiant              poor           0
+
+``` r
+library(useful)
+mtcars_x <- build.x(mpg_bin_int ~ mpg + cyl + disp + hp + drat + wt + qsec +
+                      as.factor(vs) + as.factor(am) + as.factor(gear) + as.factor(carb),
+                    data = mtcars, contrasts = FALSE)
+mtcars_y <- build.y(mpg_bin_int ~ mpg + cyl + disp + hp + drat + wt + qsec +
+                      as.factor(vs) + as.factor(am) + as.factor(gear) + as.factor(carb),
+                    data = mtcars)
+```
+
+``` r
+library(glmnet)
+```
+
+    ## Loading required package: Matrix
+
+    ## Loading required package: foreach
+
+    ## Loaded glmnet 2.0-8
+
+``` r
+set.seed(42)
+```
+
+``` r
+cars_lasso <- cv.glmnet(x = mtcars_x, y = mtcars_y, family = "binomial", nfolds = 5)
+```
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+``` r
+plot(cars_lasso)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-44-1.png)
+
+``` r
+cars_lasso$lambda.min
+```
+
+    ## [1] 0.04313855
+
+``` r
+cars_lasso$lambda.1se
+```
+
+    ## [1] 0.09965564
+
+``` r
+coef(cars_lasso, s = "lambda.1se")
+```
+
+    ## 18 x 1 sparse Matrix of class "dgCMatrix"
+    ##                           1
+    ## (Intercept)      -3.1813145
+    ## (Intercept)       .        
+    ## mpg               0.1949356
+    ## cyl              -0.3485168
+    ## disp              .        
+    ## hp                .        
+    ## drat              .        
+    ## wt                .        
+    ## qsec              .        
+    ## as.factor(vs)1    .        
+    ## as.factor(am)1    .        
+    ## as.factor(gear)4  .        
+    ## as.factor(gear)5  .        
+    ## as.factor(carb)2  .        
+    ## as.factor(carb)3  .        
+    ## as.factor(carb)4  .        
+    ## as.factor(carb)6  .        
+    ## as.factor(carb)8  .
+
+``` r
+plot(cars_lasso$glmnet.fit, xvar = "lambda")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-47-1.png)
+
+Ridge
+-----
+
+``` r
+set.seed(42)
+cars_ridge <- cv.glmnet(x = mtcars_x, y = mtcars_y, family = "binomial", nfolds = 5, alpha = 0)
+```
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+    ## Warning in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, :
+    ## one multinomial or binomial class has fewer than 8 observations; dangerous
+    ## ground
+
+``` r
+plot(cars_ridge)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-49-1.png)
+
+``` r
+cars_ridge$lambda.min
+```
+
+    ## [1] 0.07030508
+
+``` r
+cars_ridge$lambda.1se
+```
+
+    ## [1] 0.4519262
+
+``` r
+coef(cars_ridge, s = "lambda.1se")
+```
+
+    ## 18 x 1 sparse Matrix of class "dgCMatrix"
+    ##                             1
+    ## (Intercept)      -3.189377552
+    ## (Intercept)       .          
+    ## mpg               0.047319785
+    ## cyl              -0.134165116
+    ## disp             -0.001388835
+    ## hp               -0.002636723
+    ## drat              0.334558875
+    ## wt               -0.192346503
+    ## qsec              0.080938621
+    ## as.factor(vs)1    0.279408171
+    ## as.factor(am)1    0.274165432
+    ## as.factor(gear)4  0.282063664
+    ## as.factor(gear)5  0.240723129
+    ## as.factor(carb)2  0.290728883
+    ## as.factor(carb)3 -0.143111551
+    ## as.factor(carb)4 -0.352780633
+    ## as.factor(carb)6 -0.369120102
+    ## as.factor(carb)8 -0.131939348
+
+``` r
+plot(cars_ridge$glmnet.fit, xvar = "lambda")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-49-2.png)
+
+Parallelization and optimizing alpha
+------------------------------------
