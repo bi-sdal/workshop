@@ -14,6 +14,7 @@
     -   [LASSO](#lasso)
     -   [Ridge](#ridge)
     -   [Parallelization and optimizing alpha](#parallelization-and-optimizing-alpha)
+-   [Decision Trees](#decision-trees)
 
 > The fact that data science exists as a field is a colossal failure of statistics. To me, that is what statistics is all about. It is gaining insight from data using modelling and visualization. Data munging and manipulation is hard and statistics has just said that’s not our domain.”
 
@@ -231,7 +232,7 @@ GGally::wrap(
     ##     allParams[names(argsList)] <- argsList
     ##     do.call(original_fn, allParams)
     ## }
-    ## <environment: 0x5148d60>
+    ## <environment: 0x671a278>
     ## attr(,"class")
     ## [1] "ggmatrix_fn_with_params"
     ## attr(,"name")
@@ -777,7 +778,7 @@ cv1 <- cv.glm(data = diamonds, glmfit = m1, K = 5)
 cv1$delta
 ```
 
-    ## [1] 2398448 2398393
+    ## [1] 2398335 2398293
 
 ``` r
 cv2 <- cv.glm(data = diamonds, glmfit = m2, K = 5)
@@ -793,10 +794,10 @@ cv_results
 ```
 
     ##     error adjusted_error   model
-    ## 1 2398448        2398393 model_1
-    ## 2 2285151        2285051 model_2
-    ## 3 2280927        2280789 model_3
-    ## 4 2276294        2276126 model_4
+    ## 1 2398335        2398293 model_1
+    ## 2 2284836        2284771 model_2
+    ## 3 2280489        2280399 model_3
+    ## 4 2275920        2275794 model_4
 
 Bootstrap
 =========
@@ -994,3 +995,197 @@ plot(cars_ridge$glmnet.fit, xvar = "lambda")
 
 Parallelization and optimizing alpha
 ------------------------------------
+
+``` r
+library(parallel)
+library(doParallel)
+```
+
+    ## Loading required package: iterators
+
+``` r
+set.seed(42)
+
+# building a 2 layered CV
+# buld a vector specifying membership for each fold
+# to make sure an observation is on the same fold
+folds <- sample(rep(x = 1:5, length.out = nrow(mtcars_x)))
+
+# alphas
+alphas <- seq(from = 0.5, to = 1, by = 0.05)
+```
+
+``` r
+set.seed(42)
+cl <- makeCluster(2)
+registerDoParallel(cl)
+
+par_results <- foreach(i = 1:length(alphas),
+                       .errorhandling = 'remove',
+                       .inorder = FALSE,
+                       .multicombine = TRUE,
+                       .export = c("mtcars_x", "mtcars_y", 'alphas', 'folds'),
+                       .packages = 'glmnet') %dopar% {
+                         print(alphas[i])
+                         cv.glmnet(x = mtcars_x, y = mtcars_y, family = 'binomial',
+                                   nfolds = 5, foldid = folds, alpha = alphas[i])
+                       }
+```
+
+    ## Warning in e$fun(obj, substitute(ex), parent.frame(), e$data): already
+    ## exporting variable(s): mtcars_x, mtcars_y, alphas, folds
+
+``` r
+stopCluster(cl)
+```
+
+``` r
+sapply(par_results, class)
+```
+
+    ##  [1] "cv.glmnet" "cv.glmnet" "cv.glmnet" "cv.glmnet" "cv.glmnet"
+    ##  [6] "cv.glmnet" "cv.glmnet" "cv.glmnet" "cv.glmnet" "cv.glmnet"
+    ## [11] "cv.glmnet"
+
+``` r
+extract_glmnet <- function(glmnet_object) {
+  lambda_min <- glmnet_object$lambda.min
+  lambda_1se <- glmnet_object$lambda.1se
+  
+  min_i <- which(glmnet_object$lambda == lambda_min)
+  se1_i <- which(glmnet_object$lambda == lambda_1se)
+  
+  data.frame(lambda_min = lambda_min, error_min = glmnet_object$cvm[min_i],
+             lambda_1se = lambda_1se, error_1se = glmnet_object$cvm[se1_i])
+}
+
+ldf <- lapply(par_results, extract_glmnet)
+
+# using base R Reduce function
+en_alpha <- Reduce(rbind, ldf)
+en_alpha
+```
+
+    ##    lambda_min error_min lambda_1se error_1se
+    ## 1  0.04937093 0.5243807 0.18160501 0.6477668
+    ## 2  0.04925866 0.5257812 0.18119207 0.6564148
+    ## 3  0.04955621 0.5257279 0.16609273 0.6401875
+    ## 4  0.05509905 0.5230462 0.16826453 0.6438780
+    ## 5  0.05615177 0.5125492 0.14236520 0.6075758
+    ## 6  0.05240832 0.5009226 0.14582926 0.6122012
+    ## 7  0.04913280 0.4887088 0.13671493 0.5986245
+    ## 8  0.04624263 0.4787175 0.12867287 0.5889794
+    ## 9  0.04793172 0.4721890 0.11072849 0.5607349
+    ## 10 0.04540900 0.4668725 0.10490067 0.5566294
+    ## 11 0.04313855 0.4651642 0.09965564 0.5576061
+
+``` r
+# tidyverse
+en_alpha <- purrr::reduce(ldf, rbind)
+en_alpha
+```
+
+    ##    lambda_min error_min lambda_1se error_1se
+    ## 1  0.04937093 0.5243807 0.18160501 0.6477668
+    ## 2  0.04925866 0.5257812 0.18119207 0.6564148
+    ## 3  0.04955621 0.5257279 0.16609273 0.6401875
+    ## 4  0.05509905 0.5230462 0.16826453 0.6438780
+    ## 5  0.05615177 0.5125492 0.14236520 0.6075758
+    ## 6  0.05240832 0.5009226 0.14582926 0.6122012
+    ## 7  0.04913280 0.4887088 0.13671493 0.5986245
+    ## 8  0.04624263 0.4787175 0.12867287 0.5889794
+    ## 9  0.04793172 0.4721890 0.11072849 0.5607349
+    ## 10 0.04540900 0.4668725 0.10490067 0.5566294
+    ## 11 0.04313855 0.4651642 0.09965564 0.5576061
+
+``` r
+en_alpha$alpha <- alphas
+
+en_alpha
+```
+
+    ##    lambda_min error_min lambda_1se error_1se alpha
+    ## 1  0.04937093 0.5243807 0.18160501 0.6477668  0.50
+    ## 2  0.04925866 0.5257812 0.18119207 0.6564148  0.55
+    ## 3  0.04955621 0.5257279 0.16609273 0.6401875  0.60
+    ## 4  0.05509905 0.5230462 0.16826453 0.6438780  0.65
+    ## 5  0.05615177 0.5125492 0.14236520 0.6075758  0.70
+    ## 6  0.05240832 0.5009226 0.14582926 0.6122012  0.75
+    ## 7  0.04913280 0.4887088 0.13671493 0.5986245  0.80
+    ## 8  0.04624263 0.4787175 0.12867287 0.5889794  0.85
+    ## 9  0.04793172 0.4721890 0.11072849 0.5607349  0.90
+    ## 10 0.04540900 0.4668725 0.10490067 0.5566294  0.95
+    ## 11 0.04313855 0.4651642 0.09965564 0.5576061  1.00
+
+``` r
+library(ggplot2)
+library(tidyr)
+```
+
+    ## 
+    ## Attaching package: 'tidyr'
+
+    ## The following object is masked from 'package:Matrix':
+    ## 
+    ##     expand
+
+``` r
+gathered <- gather(en_alpha, type, lambda, -alpha, -error_min, -error_1se)
+gathered <- gather(gathered, error_type, error, -alpha, -type, -lambda)
+
+ggplot(data = gathered, aes(x = alpha, y = error)) + geom_point() + facet_grid(type ~ error_type)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-55-1.png)
+
+Decision Trees
+==============
+
+``` r
+library(rpart)
+
+mtcars_tree <- rpart(mpg ~ cyl + disp + hp + drat + wt + qsec +
+                        as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb),
+                      data = mtcars)
+mtcars_tree
+```
+
+    ## n= 32 
+    ## 
+    ## node), split, n, deviance, yval
+    ##       * denotes terminal node
+    ## 
+    ## 1) root 32 1126.04700 20.09062  
+    ##   2) cyl>=5 21  198.47240 16.64762  
+    ##     4) hp>=192.5 7   28.82857 13.41429 *
+    ##     5) hp< 192.5 14   59.87214 18.26429 *
+    ##   3) cyl< 5 11  203.38550 26.66364 *
+
+``` r
+library(rpart.plot)
+rpart.plot(mtcars_tree)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-57-1.png)
+
+``` r
+mtcars_tree_bin <- rpart(as.factor(mpg_bin) ~ cyl + disp + hp + drat + wt + qsec +
+                        as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb),
+                      data = mtcars)
+mtcars_tree_bin
+```
+
+    ## n= 32 
+    ## 
+    ## node), split, n, loss, yval, (yprob)
+    ##       * denotes terminal node
+    ## 
+    ## 1) root 32 9 poor (0.28125000 0.71875000)  
+    ##   2) hp< 96 8 0 good (1.00000000 0.00000000) *
+    ##   3) hp>=96 24 1 poor (0.04166667 0.95833333) *
+
+``` r
+rpart.plot(mtcars_tree_bin)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-58-1.png)

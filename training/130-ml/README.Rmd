@@ -413,6 +413,101 @@ plot(cars_ridge$glmnet.fit, xvar = "lambda")
 ## Parallelization and optimizing alpha
 
 ```{r}
+library(parallel)
+library(doParallel)
+set.seed(42)
 
+# building a 2 layered CV
+# buld a vector specifying membership for each fold
+# to make sure an observation is on the same fold
+folds <- sample(rep(x = 1:5, length.out = nrow(mtcars_x)))
+
+# alphas
+alphas <- seq(from = 0.5, to = 1, by = 0.05)
+```
+
+```{r}
+set.seed(42)
+cl <- makeCluster(2)
+registerDoParallel(cl)
+
+par_results <- foreach(i = 1:length(alphas),
+                       .errorhandling = 'remove',
+                       .inorder = FALSE,
+                       .multicombine = TRUE,
+                       .export = c("mtcars_x", "mtcars_y", 'alphas', 'folds'),
+                       .packages = 'glmnet') %dopar% {
+                         print(alphas[i])
+                         cv.glmnet(x = mtcars_x, y = mtcars_y, family = 'binomial',
+                                   nfolds = 5, foldid = folds, alpha = alphas[i])
+                       }
+stopCluster(cl)
+```
+
+```{r}
+sapply(par_results, class)
+```
+
+```{r}
+extract_glmnet <- function(glmnet_object) {
+  lambda_min <- glmnet_object$lambda.min
+  lambda_1se <- glmnet_object$lambda.1se
+  
+  min_i <- which(glmnet_object$lambda == lambda_min)
+  se1_i <- which(glmnet_object$lambda == lambda_1se)
+  
+  data.frame(lambda_min = lambda_min, error_min = glmnet_object$cvm[min_i],
+             lambda_1se = lambda_1se, error_1se = glmnet_object$cvm[se1_i])
+}
+
+ldf <- lapply(par_results, extract_glmnet)
+
+# using base R Reduce function
+en_alpha <- Reduce(rbind, ldf)
+en_alpha
+
+# tidyverse
+en_alpha <- purrr::reduce(ldf, rbind)
+en_alpha
+```
+
+```{r}
+en_alpha$alpha <- alphas
+
+en_alpha
+```
+
+```{r}
+library(ggplot2)
+library(tidyr)
+
+gathered <- gather(en_alpha, type, lambda, -alpha, -error_min, -error_1se)
+gathered <- gather(gathered, error_type, error, -alpha, -type, -lambda)
+
+ggplot(data = gathered, aes(x = alpha, y = error)) + geom_point() + facet_grid(type ~ error_type)
+```
+
+# Decision Trees
+
+```{r}
+library(rpart)
+
+mtcars_tree <- rpart(mpg ~ cyl + disp + hp + drat + wt + qsec +
+                        as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb),
+                      data = mtcars)
+mtcars_tree
+```
+
+```{r}
+library(rpart.plot)
+rpart.plot(mtcars_tree)
+```
+
+```{r}
+mtcars_tree_bin <- rpart(as.factor(mpg_bin) ~ cyl + disp + hp + drat + wt + qsec +
+                        as.factor(vs) +as.factor(am) + as.factor(gear) + as.factor(carb),
+                      data = mtcars)
+mtcars_tree_bin
+rpart.plot(mtcars_tree_bin)
 ```
 
