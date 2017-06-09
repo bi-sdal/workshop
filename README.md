@@ -108,17 +108,17 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><td></td><td>Training: <a href='./training/110-web_scraping'>Web Scraping</a>
 <tr><td></td><td>Training: Data Presentation & Reporting (<a href='./training/shiny'>Shiny</a>, Markdown/Latex, knitr)</td><td>Daniel Chen</td></tr>
 
-<tr><th>Tue 6/6</th><th align="left" colspan="2"></th></tr>
+<tr><th>Wed 6/7</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td><a href='/training/130-ml'>"Machine Learning"</a> whirlwind</td><td>Daniel Chen</td></tr>
+
+
+<tr><th>Fri 6/9</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
+<tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Training: Working with Geographic Data in R</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Spatial Data Objects in R: Spatial Data.Frames [point, line, polygon], Rasters</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Mapping Food Deserts: A Shiny Dashboard</td><td>Aaron Schroeder</td></tr>
 <tr><td></td><td>Training: Machine Learning in R</td><td>Daniel Chen</td></tr>
-
-<tr><th>Wed 6/7</th><th align="left" colspan="2"></th></tr>
-<tr><td></td><td>Data Vizualization & Exploration in R</td><td>Josh Goldstein</td></tr>
-<tr><td></td><td>Secure & Federated Record Linkage</td><td>Aaron Schroeder</td></tr>
-
-<tr><th>Fri 6/9</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Training: Baysian Analysis in R</td><td>Dave Higdon</td></tr>
 
 <tr><th>Wed 6/14</th><th align="left" colspan="2"></th></tr>
