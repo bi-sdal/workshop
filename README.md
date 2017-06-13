@@ -128,7 +128,6 @@ at the [Social and Decision Analytics Laboratory][1].
 <tr><th>Wed 6/21</th><th align="left" colspan="2"></th></tr>
 <tr><td></td><td>Social Network Analysis</td><td>Gizem Korkmaz</td></tr>
 
-<tr><th>Fri 6/23</th><th align="left" colspan="2">MIDTERMS!!</th></tr>
 
 <tr><th>Thu 7/27</th><th align="left" colspan="2">POSTER SESSION!!</th></tr>
 <tr><th></th><th align="left" colspan="2">Speakers: Nancy Potok and David Yokum</th></tr>
