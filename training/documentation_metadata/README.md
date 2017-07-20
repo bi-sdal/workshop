@@ -12,10 +12,10 @@ If you don't want to deal with merge conflicts, you can
 (if you have a 1000+ long file, you're probably doing something wrong).
 For example:
 
-    1. 01-data_ingestion.R
-    2. 02-data_clean.R
-    3. 03-data_visualize.R
-    4. 04-data_output.R
+    1. `01-data_ingestion.R`
+    2. `02-data_clean.R`
+    3. `03-data_visualize.R`
+    4. `04-data_output.R`
 
 2. Each script should have a short description on the top that explains what it is doing.
 If the script is part of a pipline. It should also document where the input data/script is coming from.
