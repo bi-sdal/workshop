@@ -58,7 +58,7 @@ all of which help make code easier to read for other people/collaboratiors.
 
 To lint your script, you can run
 
-```
+```r
 lintr::lint('my_r_script.R')
 ```
 
