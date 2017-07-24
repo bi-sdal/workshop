@@ -8,6 +8,10 @@ at the [Social and Decision Analytics Laboratory][1].
 > lenses of statistics, social science, and data science research,
 > DSPG students will learn to integrate all available data resources
 
+Why things are setup the way they are:
+
+- [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
+- [Good enough practices in scientific computing](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
