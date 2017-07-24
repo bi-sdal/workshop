@@ -50,6 +50,20 @@ To reset your R session, you can:
 This will make sure you have a totally clean enviornment when you are testing and running your script.
 It's even 'better' than using `ls(list = ls())` since it will also detach loaded packages.
 
+### lintr
+
+Using a linter helps find potential errors in your code. For example, variables that you don't use.
+It also checks to conform code to a common [code style](http://adv-r.had.co.nz/Style.html),
+all of which help make code easier to read for other people/collaboratiors.
+
+To lint your script, you can run
+
+```
+lintr::lint('my_r_script.R')
+```
+
+RStudio will open a static code analysis "Markers" tab
+
 ## Metadata
 
 Now that your scripts are documented, you need to start documenting the inputs and outputs of your file.
