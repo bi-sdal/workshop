@@ -15,6 +15,9 @@ Why things are setup the way they are:
 
 <table>
 <tr><th>Mon 5/22</th><th align="left" colspan="2"></th></tr>
+<tr><td></td><td>IRB and Ethics Training: 
+</td><td>Sallie Keller, Gizem Korkmaz</td></tr>
+
 <tr><td></td><td><a href='./training//000-setup'>System Setup</a>: 
 <ul>
 <li>Git Bash</li>
